@@ -654,6 +654,7 @@ header {
 			border-bottom: 1px solid $border-color-2;
 			background-color: #fff;
 			padding: 15px 20px;
+			position: fixed !important;
 			@include tablet {
 				padding: 15px 15px 5px 15px;
 			}
