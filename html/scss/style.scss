@@ -3310,6 +3310,11 @@ section#reviews {
 			box-shadow: none;
 			border: 1px solid $border-color-3;
 		}
+		&[name="tour"]{
+			background-color: #e9ecef;
+			opacity: 1;
+			pointer-events: none;
+		}
 	}
 	select {
 		display: none;
