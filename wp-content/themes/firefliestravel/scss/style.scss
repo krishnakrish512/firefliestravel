@@ -90,7 +90,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 		}
 	}
 	/*First level styles */
-	.main-menu>ul>li span {
+	.main-menu>ul>li {
 		>a {
 			color: #fff;
 			padding: 0 8px 15px 8px;
@@ -102,7 +102,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 				color: $color-1;
 		}
 	}
-	header.sticky .main-menu>ul>li span {
+	header.sticky .main-menu>ul>li {
 		>a {
 			color: #444;
 		}
@@ -202,7 +202,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 }
 
 /* Submenu 3rd level */
-.main-menu ul ul li span a {
+.main-menu ul ul li a {
 	font-weight: normal!important;
 	&:hover {
 		color: $color-1;
@@ -5210,7 +5210,7 @@ header {
                 }
             }
 
-            .main-menu>ul>li span {
+            .main-menu>ul>li {
                 >a {
                     color: #444;
                 }
@@ -7004,4 +7004,13 @@ ul.plan-features {
 			color: #fff;
 		}
 	}
-	
+	.design-by{
+		color: #fff;
+		opacity: 0.5;
+		@include transition-default;
+		
+		&:hover {
+			opacity: 1;
+			color: #f99e1c;
+		}
+	}

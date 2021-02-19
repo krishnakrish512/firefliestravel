@@ -31,6 +31,7 @@
 <div id="page">
 
     <header class="header header_bg-white position-static clearfix">
+        
         <div id="logo">
             <?php
             if (function_exists('the_custom_logo')) {

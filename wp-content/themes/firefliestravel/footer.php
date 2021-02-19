@@ -50,13 +50,13 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                By <a href="#"> Nirvan Studio</a>
+                By <a href="https://nirvanstudio.com/" target="_blank" class="design-by"> Nirvan Studio</a>
             </div>
             <div class="col-lg-6">
                 <ul id="additional_links">
                     <li><a href="#0">Terms and conditions</a></li>
                     <li><a href="#0">Privacy</a></li>
-                    <li><span>© <?php echo date('Y'); ?> Panagea</span></li>
+                    <li><span>© <?php echo date('Y'); ?> Fireflies Travel</span></li>
                 </ul>
             </div>
         </div>
