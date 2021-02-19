@@ -31,7 +31,7 @@
 <div id="page">
 
     <header class="header header_bg-white position-static clearfix">
-        <div class="container">
+        
         <div id="logo">
             <?php
             if (function_exists('the_custom_logo')) {
@@ -60,7 +60,6 @@
                 'container' => ''
             )); ?>
         </nav>
-        </div>
     </header>
     <!-- /header -->
     <div class="clearfix"></div>
