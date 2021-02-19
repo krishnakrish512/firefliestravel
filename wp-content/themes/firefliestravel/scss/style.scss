@@ -7004,4 +7004,14 @@ ul.plan-features {
 			color: #fff;
 		}
 	}
-	
+	.design-by{
+		&:hover{
+			color: #fff;
+			opacity: 0.5;
+			@include transition-default;
+			&:hover {
+				opacity: 1;
+				color: #f99e1c;
+			}
+		}
+	}

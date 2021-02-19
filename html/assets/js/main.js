@@ -9,6 +9,14 @@
 		$('.hero_in h1,.hero_in form').addClass('animated');
 		$('.hero_single, .hero_in').addClass('start_bg_zoom');
 		$(window).scroll();
+        $('#slider').flexslider({
+            animation: "fade",
+            controlNav: false,
+            //animationLoop: true,
+            slideshow: true,
+            slideshowSpeed: 5000,
+            prevText: "prev"
+        });
 	});
 	
 	// Sticky nav
@@ -419,24 +427,6 @@
 	        }
 	    }).trigger('resize');
 	});
-	//DateRange Picker
-	$('input[name="dates"]').daterangepicker({
-		autoUpdateInput: false,
-		parentEl: '.scroll-fix',
-		minDate: new Date(),
-		opens: 'left',
-		locale: {
-			cancelLabel: 'Clear'
-		}
-	});
-	$('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
-		$(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-	});
-	$('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
-		$(this).val('');
-	});
-	//auto complete input
-	$('input[name="dates"]').attr('autocomplete', 'off');
 	
-})(window.jQuery); 
+})(window.jQuery);
 

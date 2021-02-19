@@ -50,7 +50,7 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                By <a href="#"> Nirvan Studio</a>
+                By <a href="#" class="design-by"> Nirvan Studio</a>
             </div>
             <div class="col-lg-6">
                 <ul id="additional_links">
