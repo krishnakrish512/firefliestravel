@@ -24,17 +24,16 @@ if (($_GET['tour_id'])) {
         <div class="container margin_60_35">
             <div class="row">
                 <div class="col-lg-9">
-                    <?php $form = get_field('enquiry_form', 'option');
-                    //                    var_dump($form);
-                    //                    exit();
+                    <!--                    --><?php //$form = get_field('enquiry_form', 'option');
+                    //                                        var_dump($form);
+                    //                                        exit();
                     ?>
                     <section class="inquiry-form-content booking pr-5">
                         <h5 class="mb-4">Tour Inquiry Form</h5>
-                        <?php echo do_shortcode("[contact-form-7 id='" . $form . "']") ?>
+                        <?php echo do_shortcode("[contact-form-7 id=\"162\" title=\"Enquiry Form\"]") ?>
                     </section>
                 </div>
                 <!-- /col -->
-
                 <aside class="col-lg-3">
                     <div class="widget">
                         <div class="widget-title">

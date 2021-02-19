@@ -23,7 +23,7 @@ $tours = get_posts($args);
                            as $tour): ?>
                 <div class="item">
                     <a href="<?= get_the_permalink($tour->ID); ?>" class="grid_item_adventure">
-                        <?php $image = get_the_post_thumbnail($tour->ID, 'category-thumb'); ?>
+                        <?php $image = get_the_post_thumbnail($tour->ID); ?>
                         <figure>
                             <?= $image; ?>
                             <div class="info">
