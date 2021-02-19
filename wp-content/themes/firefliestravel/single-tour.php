@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
-                            <p class="lead"><?php the_field('intro_text') ?></p>
+                            <p class="lead"><?php the_content(); ?></p>
                             <h6>Pictures from our users</h6>
                             <div class="pictures magnific-gallery clearfix">
                                 <?php $images = get_field('gallery');
