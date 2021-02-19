@@ -13,7 +13,7 @@
                 <h4>Send a message</h4>
                 <p><?php the_sub_field('contact_form_title'); ?></p>
                 <div id="message-contact"></div>
-                <?php echo do_shortcode("[contact-form-7 id=\"151\" title=\"Contact form\"]") ?>
+                <?php echo do_shortcode("[contact-form-7 id='180' title='Contact form']") ?>
             </div>
         </div>
         <!-- /row -->

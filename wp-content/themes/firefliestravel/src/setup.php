@@ -7,7 +7,7 @@ function firefile_setup() {
     register_nav_menus( [
         'primary' => 'Primary'
     ] );
-    add_image_size('category-thumb', 350, 250,true);
+    add_image_size('category-thumb', 350, 450,true);
     add_image_size( 'thumb-crazy', 375,275, true);
 
 }
