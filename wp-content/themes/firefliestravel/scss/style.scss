@@ -50,6 +50,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 
 @import 'variables';
 @import 'mixin';
+@import 'blog';
 
 /* MAIN NAVIGATION */
 /* All styles for screen size over 992px*/
@@ -3303,6 +3304,9 @@ section#reviews {
 }
 
 .booking {
+	br{
+		display: none;
+	}
 	input {
 		font-weight: 500;
 		height: 45px;
