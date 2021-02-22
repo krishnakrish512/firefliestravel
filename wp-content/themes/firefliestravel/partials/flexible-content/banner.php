@@ -1,4 +1,3 @@
-
 <main class="">
     <section class="slider">
         <div id="slider" class="flexslider">
@@ -30,10 +29,12 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <select class="wide">
-                                        <option>All Categories</option>
-                                        <option>Tours</option>
-                                        <option>Hotels</option>
-                                        <option>Restaurants</option>
+                                        <?php
+                                        $category = get_terms('tour-category');//custom category name
+                                        foreach ($category as $catVal) {
+                                            echo '<option value="">' . $catVal->name . '</option>';
+                                        }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-lg-2">
