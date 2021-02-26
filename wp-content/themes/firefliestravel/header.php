@@ -41,8 +41,8 @@
 //                            exit();
             } ?>
             <a href="<?= get_home_url(); ?>">
-                <img src="<?php echo $logo; ?>" width="150" height="36" alt="" class="logo_normal">
-                <img src="<?php echo $logo; ?>" width="150" height="36" alt="" class="logo_sticky">
+                <img src="<?php echo $logo; ?>" width="190" alt="" class="logo_normal">
+                <img src="<?php echo $logo; ?>" width="190" alt="" class="logo_sticky">
             </a>
         </div>
         <!-- /top_menu -->
