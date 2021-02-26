@@ -21,9 +21,13 @@ $tours = get_posts($args);
             <?php foreach ($tours
 
                            as $tour): ?>
+                <?php $image = get_the_post_thumbnail($tour->ID, 'thumb-crazy');
+//                var_dump($image);
+//                exit();
+                ?>
                 <div class="item">
                     <a href="<?= get_the_permalink($tour->ID); ?>" class="grid_item_adventure">
-                        <?php $image = get_the_post_thumbnail($tour->ID); ?>
+
                         <figure>
                             <?= $image; ?>
                             <div class="info">

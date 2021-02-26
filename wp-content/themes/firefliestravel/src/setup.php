@@ -8,7 +8,7 @@ function firefile_setup() {
         'primary' => 'Primary'
     ] );
     add_image_size('category-thumb', 350, 450,true);
-    add_image_size( 'thumb-crazy', 375,275, true);
+    add_image_size( 'thumb-crazy', 292,376, true);
 
 }
 
