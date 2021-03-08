@@ -27,16 +27,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 ml-lg-auto">
-                <h5>Useful links</h5>
-                <ul class="links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="blog.html">News &amp; Events</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                </ul>
-            </div>
             <div class="col-lg-3 col-md-6">
                 <h5>Contact with Us</h5>
                 <ul class="contacts">

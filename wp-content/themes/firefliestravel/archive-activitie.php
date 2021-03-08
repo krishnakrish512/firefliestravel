@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="clearfix"></div>
 <main>
-    <?php $image = get_field('tour_image', 'option'); ?>
+    <?php $image = get_field('activities_image', 'option'); ?>
     <section class="hero_in tours" style="background-image: url('<?= $image; ?>')">
         <div class="wrapper">
             <div class="container">
-                <h1 class="fadeInUp"><span></span><?php the_field('tour_title', 'option') ?></h1>
+                <h1 class="fadeInUp"><span></span><?php the_field('activities_title', 'option') ?></h1>
             </div>
         </div>
     </section>
@@ -41,7 +41,7 @@
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php the_field('intro_text'); ?></p>
                                 <?php if (get_field('price')): ?>
-                                    <span class="price">From <strong>$<?php the_field('price'); ?></strong> /per person</span>
+                                    <span class="price"> <strong><?php the_field('price'); ?></strong> </span>
                                 <?php endif; ?>
                                 <?php if (!get_field('price')): ?>
                                     <a href="<?php the_permalink(); ?>"
