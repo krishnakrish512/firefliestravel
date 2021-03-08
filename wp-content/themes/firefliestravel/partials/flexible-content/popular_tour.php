@@ -3,7 +3,7 @@
     'orderby' => 'date',
     'order' => 'DESC',
     'post_status' => 'publish',
-    'posts_per_page' => 4,
+    'posts_per_page' => 10,
 //    'meta_key' => 'popular_tour',
 //    'meta_value' => 1
 ];
@@ -18,16 +18,11 @@ $tours = get_posts($args);
         </div>
 
         <div id="reccomended_adventure" class="owl-carousel owl-theme">
-            <?php foreach ($tours
-
-                           as $tour): ?>
-                <?php $image = get_the_post_thumbnail($tour->ID, 'thumb-crazy');
-//                var_dump($image);
-//                exit();
+            <?php foreach ($tours as $tour):
+                $image = get_the_post_thumbnail($tour->ID, 'thumb-crazy');
                 ?>
                 <div class="item">
                     <a href="<?= get_the_permalink($tour->ID); ?>" class="grid_item_adventure">
-
                         <figure>
                             <?= $image; ?>
                             <div class="info">

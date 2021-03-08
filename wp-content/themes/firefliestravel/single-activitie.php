@@ -42,9 +42,7 @@
             <nav class="secondary_nav sticky_horizontal">
                 <div class="container">
                     <div class="d-flex align-items-center justify-content-between">
-                        <?php if (get_field('price')): ?>
-                            <div><h6 class="m-0"><?php the_field('price') ?></h6></div>
-                        <?php endif; ?>
+                        <div><h6 class="m-0"><?php the_field('price') ?></h6></div>
                         <div>
                             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
                                class="aside-panel-bt btn_1">Inquiry</a></div>
@@ -92,6 +90,11 @@
                                         <figure><img src="<?php the_sub_field('image_url'); ?>" class="img-fluid"
                                                      alt="">
                                         </figure>
+                                        <p>After breakfast, your guided Sightseeing Tour begins on a shared basis in a
+                                            bus/coach (seat-in-coach or SIC basis). You will start the day with an
+                                            excursion to the Pyramids of Giza with your guide. Located on the edge of
+                                            the windswept desert, it is the world's tallest man-made structure for more
+                                            than 3,500 years. </p>
                                         <div class="content_more">
                                             <p><?php the_sub_field('paragraph'); ?></p>
                                         </div>
@@ -141,6 +144,7 @@
                                 <?php endwhile; ?>
                             </ul>
                         </div>
+
                     </div>
                 </div>
                 <!-- /row -->
@@ -150,6 +154,7 @@
                         <?php
                         $map_image = get_field('map_image'); ?>
                         <img src="<?= $map_image; ?>" alt="google map" class="img-fluid">
+
                     </div>
                 <?php endif; ?>
                 <!-- End Map -->
