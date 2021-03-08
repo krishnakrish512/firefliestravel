@@ -90,16 +90,12 @@
                                         <figure><img src="<?php the_sub_field('image_url'); ?>" class="img-fluid"
                                                      alt="">
                                         </figure>
-                                        <p>After breakfast, your guided Sightseeing Tour begins on a shared basis in a
-                                            bus/coach (seat-in-coach or SIC basis). You will start the day with an
-                                            excursion to the Pyramids of Giza with your guide. Located on the edge of
-                                            the windswept desert, it is the world's tallest man-made structure for more
-                                            than 3,500 years. </p>
+                                        <p><?php the_sub_field('paragraph'); ?></p>
                                         <div class="content_more">
-                                            <p><?php the_sub_field('paragraph'); ?></p>
+
                                         </div>
                                         <!-- /content_more -->
-                                        <a href="#0" class="show_hide"
+                                        <a href="#0" class="show_hide d-none"
                                            data-content="toggle-text"><strong>Read
                                                 More</strong></a>
                                     </div>
@@ -148,8 +144,9 @@
                     </div>
                 </div>
                 <!-- /row -->
-                <h4>Location</h4>
                 <?php if (get_field('map_image')): ?>
+                    <h4>Location</h4>
+
                     <div class="map map_single mb-5 h-auto">
                         <?php
                         $map_image = get_field('map_image'); ?>

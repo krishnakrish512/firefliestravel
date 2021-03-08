@@ -11,6 +11,7 @@ function firefile_setup()
     if (function_exists('add_image_size')) {
         add_image_size('category-thumb', 350, 450, true);
         add_image_size('thumb-crazy', 292, 376, true);
+        add_image_size('thumb', 400, 267, true);
     }
 }
 
