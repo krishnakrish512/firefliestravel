@@ -92,8 +92,8 @@
                                         <figure><img src="<?php the_sub_field('image_url'); ?>" class="img-fluid"
                                                      alt="">
                                         </figure>
-                                        <p><?php the_sub_field('paragraph'); ?></p>
-                                        <div class="content_more ">
+
+                                        <div class="content_more">
                                             <p><?php the_sub_field('paragraph'); ?></p>
                                         </div>
                                         <!-- /content_more -->

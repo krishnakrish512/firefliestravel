@@ -5066,6 +5066,7 @@ ul.list_feat {
 .timeline {
    padding-left: 25px;
    border-left: 1px solid $border-color-2;
+
    h3 {
 	   @include fontSize(18px);
 	   position: relative;;
@@ -5079,6 +5080,9 @@ ul.list_feat {
 			color: #ccc;
 			background-color: #fff;
 		}
+	}
+	figure{
+		max-width: 500px;
 	}
 }
 
