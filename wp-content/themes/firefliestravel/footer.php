@@ -6,9 +6,20 @@
             <div class="col-lg-5 col-md-12 p-r-5">
                 <p><img src="<?= $contact['footer_logo'] ?>" width="150" height="36" alt=""></p>
                 <p><?= $contact['description'] ?></p>
+                
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact with Us</h5>
+                <ul class="contacts">
+                    <li><a href="tel://61280932400"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
+                    <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> <?= $contact['footer_email'] ?></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5>Follow Us</h5>
                 <div class="follow_us">
                     <ul>
-                        <li>Follow us</li>
                         <?php if ($social['facebook_url']): ?>
                             <li><a href="<?= $social['facebook_url'] ?> "><i class="ti-facebook"></i></a></li>
                         <?php endif; ?>
@@ -26,14 +37,6 @@
                         <?php endif; ?>
                     </ul>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5>Contact with Us</h5>
-                <ul class="contacts">
-                    <li><a href="tel://61280932400"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
-                    <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> <?= $contact['footer_email'] ?></a>
-                    </li>
-                </ul>
             </div>
         </div>
         <!--/row-->
