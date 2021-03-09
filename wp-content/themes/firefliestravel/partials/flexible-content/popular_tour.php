@@ -26,7 +26,7 @@ $tours = get_posts($args);
                         <figure>
                             <?= $image; ?>
                             <div class="info">
-                                <em><?php the_field('trip_days', $tour->ID) ?> <?= get_field('country_name', $tour->ID) ?></em>
+                                <em><?php the_field('trip_days', $tour->ID) ?></em>
                                 <h3><?= get_the_title($tour->ID); ?></h3>
                             </div>
                         </figure>

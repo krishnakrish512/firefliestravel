@@ -56,12 +56,12 @@
         </div>
         <!-- /wrapper-grid -->
 
-        <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
+        <p class="text-center d-none"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
 
     </div>
     <!-- /container -->
 
-    <div class="bg_color_1">
+    <div class="bg_color_1 d-none">
         <div class="container margin_60_35">
             <div class="row">
                 <div class="col-md-4">
