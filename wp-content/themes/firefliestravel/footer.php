@@ -3,12 +3,12 @@
     <?php $social = get_field('social', 'option'); ?>
     <div class="container margin_60_35">
         <div class="row">
-            <div class="col-lg-5 col-md-12 p-r-5">
+            <div class="col-lg-6 col-md-12 pr-md-5">
                 <p><img src="<?= $contact['footer_logo'] ?>" width="150" height="36" alt=""></p>
                 <p><?= $contact['description'] ?></p>
                 
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6 pl-md-4">
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
                     <li><a href="tel://61280932400"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
@@ -16,7 +16,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                 <h5>Follow Us</h5>
                 <div class="follow_us">
                     <ul>
@@ -43,7 +43,7 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                By <a href="https://nirvanstudio.com/" target="_blank" class="design-by"> Nirvan Studio</a>
+                Website By <a href="https://nirvanstudio.com/" target="_blank" class="design-by"> Nirvan Studio</a>
             </div>
             <div class="col-lg-6">
                 <ul id="additional_links">
