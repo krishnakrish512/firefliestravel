@@ -1047,7 +1047,7 @@ main {
 
 /* Footer */
 footer {
-	background-color: $color-4;
+	background-color: $color-2;
 	@include rgba(color, #fff, 0.7);
 	h5 {
 		color: #fff;
@@ -5569,8 +5569,9 @@ a.address {
 .bg_color_1 {
 	background-color: #fff;
 }
+
 .box_1 {
-	background-color: $color-4;
+	background-color: $color-1;
 	color: #fff;
 	padding: 45px;
 	opacity: 0;	
