@@ -31,6 +31,7 @@
                                     <select class="wide">
                                         <?php
                                         $category = get_terms('tour-category');//custom category name
+//                                        $category = get_terms('activitie-category');
                                         foreach ($category as $catVal) {
                                             echo '<option value="">' . $catVal->name . '</option>';
                                         }
