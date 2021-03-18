@@ -56,6 +56,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
+                            <h3><?php the_title(); ?></h3>
                             <p class="lead"><?php the_content(); ?></p>
                             <h6>Pictures from our users</h6>
                             <div class="pictures magnific-gallery clearfix">
@@ -81,6 +82,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
+
                             <div class="timeline">
                                 <?php while (have_rows('itinerary_repeater')):
                                     the_row()

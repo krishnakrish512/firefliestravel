@@ -58,6 +58,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
+                            <h3><?php the_title(); ?></h3>
                             <p class="lead"><?php the_content(); ?></p>
                             <h6>Pictures from our users</h6>
                             <div class="pictures magnific-gallery clearfix">
@@ -92,9 +93,9 @@
                                         <figure><img src="<?php the_sub_field('image_url'); ?>" class="img-fluid"
                                                      alt="">
                                         </figure>
-
+                                        <p><?php the_sub_field('paragraph'); ?></p>
                                         <div class="content_more">
-                                            <p><?php the_sub_field('paragraph'); ?></p>
+
                                         </div>
                                         <!-- /content_more -->
                                         <a href="#0" class="show_hide d-none"
