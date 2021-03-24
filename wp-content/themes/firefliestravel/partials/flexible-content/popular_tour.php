@@ -1,14 +1,3 @@
-<?php $args = [
-    'post_type' => 'tour',
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'post_status' => 'publish',
-    'posts_per_page' => 10,
-//    'meta_key' => 'popular_tour',
-//    'meta_value' => 1
-];
-$tours = get_posts($args);
-?>
 <div class="container container-custom margin_80_55">
     <section class="add_bottom_45">
         <div class="main_title_3">
@@ -16,23 +5,68 @@ $tours = get_posts($args);
             <h2><?php the_sub_field('title'); ?></h2>
             <p><?php the_sub_field('description'); ?></p>
         </div>
+        <?php
 
+        $args = [
+            'post_type' => 'tour',
+            'post_status' => 'publish'
+        ];
+
+        if (get_sub_field('select_tour_category')) {
+            $args['tax_query'] = [
+                [
+                    'taxonomy' => 'tour-category',
+                    'field' => 'term_id',
+                    'terms' => [get_sub_field('tour_category')]
+                ]
+            ];
+
+            $args['posts_per_page'] = get_sub_field('number');
+
+            $order_by = get_sub_field('order_by');
+
+            switch ($order_by) {
+                case "rand":
+                    $args['orderby'] = 'rand';
+                    break;
+                case "date_desc":
+                    $args['orderby'] = 'date';
+                    $args['order'] = 'DESC';
+                    break;
+                case "date_asc":
+                    $args['orderby'] = 'date';
+                    $args['order'] = 'ASC';
+                    break;
+            }
+        }
+
+        if (!get_sub_field('select_tour_category')) {
+            $args['post__in'] = get_sub_field('tours');
+            $args['posts_per_page'] = -1;
+        }
+        $tours_query = new WP_Query($args);
+        ?>
         <div id="reccomended_adventure" class="owl-carousel owl-theme">
-            <?php foreach ($tours as $tour):
-                $image = get_the_post_thumbnail($tour->ID, 'thumb-crazy');
+            <?php while ($tours_query->have_posts()):
+                $tours_query->the_post();
+                global $post;
+
+                $image = get_the_post_thumbnail($post->ID, 'thumb-crazy');
                 ?>
                 <div class="item">
-                    <a href="<?= get_the_permalink($tour->ID); ?>" class="grid_item_adventure">
+                    <a href="<?= get_the_permalink($post->ID); ?>" class="grid_item_adventure">
                         <figure>
                             <?= $image; ?>
                             <div class="info">
-                                <em><?php the_field('trip_days', $tour->ID) ?></em>
-                                <h3><?= get_the_title($tour->ID); ?></h3>
+                                <em><?php the_field('trip_days', $post->ID) ?></em>
+                                <h3><?= get_the_title($post->ID); ?></h3>
                             </div>
                         </figure>
                     </a>
                 </div>
-            <?php endforeach; ?>
+            <?php endwhile;
+            wp_reset_query();
+            ?>
         </div>
         <!-- /reccomended_aventure -->
     </section>

@@ -4,7 +4,16 @@ if (($_GET['tour_id'])) {
     $tour_name = get_the_title($tour_id);
 //        var_dump($tour_name);
 //        exit();
-} ?>
+}
+if (($_GET['ativitie_id'])) {
+    $activitie_id = $_GET['ativitie_id'];
+    $activitie_name = get_the_title($activitie_id);
+//        var_dump($activitie_name);
+//        exit();
+}
+
+
+?>
 
 
 <div class="clearfix"></div>
@@ -69,6 +78,6 @@ if (($_GET['tour_id'])) {
 </main>
 <!--/main-->
 <script>
-    jQuery('[name="tour"]').val('<?= $tour_name?>');
+    jQuery('[name="tour"]').val('<?= $tour_name, $activitie_name ?>');
 
 </script>

@@ -44,7 +44,7 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <div><h6 class="m-0"><?php the_field('price') ?></h6></div>
                         <div>
-                            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
+                            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?ativitie_id=" . get_the_ID()); ?>"
                                class="aside-panel-bt btn_1">Inquiry</a></div>
                     </div>
                 </div>
