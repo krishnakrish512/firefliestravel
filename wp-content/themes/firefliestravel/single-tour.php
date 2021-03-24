@@ -98,7 +98,7 @@
 
                                         </div>
                                         <!-- /content_more -->
-                                        <a href="#0" class="show_hide d-none"
+                                        <a href="#0" class="show_hide"
                                            data-content="toggle-text"><strong>Read
                                                 More</strong></a>
                                     </div>
