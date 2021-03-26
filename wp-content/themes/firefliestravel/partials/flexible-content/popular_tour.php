@@ -1,9 +1,9 @@
-<div class="container container-custom margin_80_55">
-    <section class="add_bottom_45">
-        <div class="main_title_3">
+<!-- /container -->
+<section class="margin_60_35 bg_color_1">
+    <div class="container">
+        <div class="main_title_3 text-center">
             <span><em></em></span>
             <h2><?php the_sub_field('title'); ?></h2>
-            <p><?php the_sub_field('description'); ?></p>
         </div>
         <?php
 
@@ -68,6 +68,7 @@
             wp_reset_query();
             ?>
         </div>
-        <!-- /reccomended_aventure -->
-    </section>
-    <!-- /section -->
+    </div>
+
+</section>
+

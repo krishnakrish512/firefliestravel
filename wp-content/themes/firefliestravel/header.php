@@ -27,39 +27,65 @@
 </head>
 
 <body>
-
 <div id="page">
+    <?php $contact = get_field('contact', 'option'); ?>
 
-    <header class="header header_bg-white position-static clearfix">
-        
-        <div id="logo">
-            <?php
-            if (function_exists('the_custom_logo')) {
-                $custom_logo_id = get_theme_mod('custom_logo');
-                $logo = wp_get_attachment_image_url($custom_logo_id, 'full');
+    <header class="header  position-static clearfix">
+        <div class="header-top">
+            <div class="container">
+                <ul class="list-inline">
+                    <li><a href="tel: +977 9802050692"> <i class="icon_phone"></i><?= $contact['header_number'] ?></a></li>
+                    <li><a href="tel: info@firefliestravel.com.np"> <i class="icon_mail"></i>
+                            <?= $contact['header_email'] ?> </a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="header-main clearfix">
+            <div class="container">
+                <div id="logo">
+                    <?php
+                    if (function_exists('the_custom_logo')) {
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_url($custom_logo_id, 'full');
 //                            var_dump($logo);
 //                            exit();
-            } ?>
-            <a href="<?= get_home_url(); ?>">
-                <img src="<?php echo $logo; ?>" width="190" alt="" class="logo_normal">
-                <img src="<?php echo $logo; ?>" width="190" alt="" class="logo_sticky">
-            </a>
-        </div>
-        <!-- /top_menu -->
-        <a href="#menu" class="btn_mobile">
-            <div class="hamburger hamburger--spin" id="hamburger">
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
+                    } ?>
+                    <a href="<?= get_home_url(); ?>">
+                        <img src="<?php echo $logo; ?>" width="150" height="36" alt="" class="logo_normal">
+                        <img src="<?php echo $logo; ?>g" width="150" height="36" alt="" class="logo_sticky">
+                    </a>
                 </div>
+                <!-- /top_menu -->
+                <ul id="top_menu">
+                    <li>
+                        <a href="javascript:void(0)" class="icon_search" title="Search Icon"></a>
+                        <a href="javascript:void(0)" class="icon_close" title="Search Icon" style="display:none;"></a>
+                    </li>
+                </ul>
+                <a href="#menu" class="btn_mobile">
+                    <div class="hamburger hamburger--spin" id="hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+                <nav id="menu" class="main-menu">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'container' => ''
+                    )); ?>
+                </nav>
             </div>
-        </a>
-        <nav id="menu" class="main-menu">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => ''
-            )); ?>
-        </nav>
+            <form action="<?php echo esc_url( home_url( '/' ) ); ?>" class="top-search-form">
+                <div class="container">
+                    <input type="text" class="form-control" placeholder="Type & Hit Enter...">
+                </div>
+
+            </form>
+        </div>
+
     </header>
     <!-- /header -->
     <div class="clearfix"></div>

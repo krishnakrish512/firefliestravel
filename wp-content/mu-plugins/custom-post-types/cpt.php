@@ -63,25 +63,25 @@ add_post_type( 'Destination', [
 ////    'taxonomies'  => [ 'hotel-category' ],
 //    'has_archive' => true,
 //] );
-//add_post_type( 'Testimonial', [
-//    'public' => true,
-////    'menu_position' => 5,
-////    'labels'      => [ 'add_new_item' => "Add new Testimonial" ],
-//    'supports' => ['title', 'editor','thumbnail'],
-//    'has_archive' => true,
-//    'labels' => array(
-//        'name' => 'Testimonials',
-//        'singular_name' => 'Testimonial',
-//        'add_new' => 'Add New Testimonial',
-//        'add_new_item' => 'Add New Testimonial',
-//        'edit_item' => 'Edit Testimonial',
-//        'new_item' => 'New Testimonial',
-//        'view_item' => 'View Testimonial',
-//        'search_items' => 'Search Testimonials',
-//        'not_found' => 'No testimonials found',
-//        'not_found_in_trash' => 'No testimonials found in Trash',
-//    ),
-//] );
+add_post_type( 'Testimonial', [
+    'public' => true,
+//    'menu_position' => 5,
+//    'labels'      => [ 'add_new_item' => "Add new Testimonial" ],
+    'supports' => ['title', 'editor','thumbnail'],
+    'has_archive' => true,
+    'labels' => array(
+        'name' => 'Testimonials',
+        'singular_name' => 'Testimonial',
+        'add_new' => 'Add New Testimonial',
+        'add_new_item' => 'Add New Testimonial',
+        'edit_item' => 'Edit Testimonial',
+        'new_item' => 'New Testimonial',
+        'view_item' => 'View Testimonial',
+        'search_items' => 'Search Testimonials',
+        'not_found' => 'No testimonials found',
+        'not_found_in_trash' => 'No testimonials found in Trash',
+    ),
+] );
 
 
 $labels = array(

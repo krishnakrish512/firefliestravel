@@ -21,7 +21,7 @@ function firefile_scripts()
 {
 
     wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
-    wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/custom.css.css');
+    wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/custom.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css');
     wp_enqueue_style('vendors-style', get_template_directory_uri() . '/assets/css/vendors.css');
 
@@ -30,7 +30,7 @@ function firefile_scripts()
     wp_enqueue_script('validate-script', get_template_directory_uri() . '/assets/js/validate.js', [], '1.0', true);
     wp_enqueue_script('flexslider-script', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', [], '1.0', true);
 
-    wp_enqueue_script('daterangepicker', get_template_directory_uri() . '/assets/js/daterangepicker.js', [], '1.0', true);
+//    wp_enqueue_script('daterangepicker', get_template_directory_uri() . '/assets/js/daterangepicker.js', [], '1.0', true);
     wp_enqueue_script('main-script-script', get_template_directory_uri() . '/assets/js/main.js', [], '1.0', true);
 
 
