@@ -19,6 +19,8 @@
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <!-- BASE CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -36,32 +38,50 @@
 		
 	<div id="page">
 		
-	<header class="header header_bg-white position-static clearfix">
-		<div id="logo">
-			<a href="index.html">
-				<img src="assets/images/logo_sticky.svg" width="150" height="36" alt="" class="logo_normal">
-				<img src="assets/images/logo_sticky.svg" width="150" height="36" alt="" class="logo_sticky">
-			</a>
-		</div>
-		<!-- /top_menu -->
-		<a href="#menu" class="btn_mobile">
-			<div class="hamburger hamburger--spin" id="hamburger">
-				<div class="hamburger-box">
-					<div class="hamburger-inner"></div>
+		<header class="header  position-static clearfix">
+			<div class="header-top">
+				<div class="container">
+					<ul class="list-inline">
+						<li><a href="tel: +977 9802050692"> <i class="icon_phone"></i>  +977 9802050692</a></li>
+						<li><a href="tel: info@firefliestravel.com.np"> <i class="icon_mail"></i>  info@firefliestravel.com.np</a></li>
+					</ul>
+					</ul>
 				</div>
 			</div>
-		</a>
-		<nav id="menu" class="main-menu">
-			<ul>
-				<li><span><a href="index.html">Home</a></span></li>
-				<li><span><a href="about.html">About</a></span></li>
-				<li><span><a href="tour-grid.html">Tours</a></span></li>
-				<li><span><a href="#0">Destination</a></span></li>
-				<li><span><a href="contact.html">Contact</a></span></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- /header -->
+			<div class="header-main clearfix">
+				<div class="container">
+					<div id="logo">
+						<a href="index.html">
+							<img src="assets/images/logo.png" width="150" height="36" alt="" class="logo_normal">
+							<img src="assets/images/logo.png" width="150" height="36" alt="" class="logo_sticky">
+						</a>
+					</div>
+					<!-- /top_menu -->
+					<ul id="top_menu">
+						<li><a href="#" class="icon_search" title="Search Icon"></a></li>
+					</ul>
+					<a href="#menu" class="btn_mobile">
+						<div class="hamburger hamburger--spin" id="hamburger">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</a>
+					<nav id="menu" class="main-menu">
+						<ul>
+							<li><span><a href="index.html">Home</a></span></li>
+							<li><span><a href="about.html">About</a></span></li>
+							<li><span><a href="tour-grid.html">Tours</a></span></li>
+							<li><span><a href="#0">Destination</a></span></li>
+							<li><span><a href="contact.html">Contact</a></span></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+			
+		</header>
+		<!-- /header -->
 	<div class="clearfix"></div>
 		<main>
 			<section class="hero_in adventure_detail" style="background-image: url('assets/images/bg_adventure_detail.jpg')">
@@ -97,118 +117,290 @@
 				<nav class="secondary_nav sticky_horizontal">
 					<div class="container">
 						<div class="d-flex align-items-center justify-content-between">
-							<div><h6 class="m-0">From $200 per person</h6></div>
+							<ul class="clearfix">
+								<li><a href="#description" class="active">Description</a></li>
+								<li><a href="#gallery">Gallery</a></li>
+								<li><a href="#itinerary">Itinerary</a></li>
+								<li><a href="#include">Include</a></li>
+								<li><a href="#exclude">Exclude</a></li>
+								<li><a href="#location">Location</a></li>
+								<li></li>
+							</ul>
 							
-							<div><a class="aside-panel-bt btn_1" href="inquiry.html">Inquiry</a></div>
 
 						</div>
 					</div>
 				</nav>
-				<div class="container margin_60_35 adventure_description">
+				<div class="container margin_60_35">
 					<div class="row mb-5">
-						<div class="col-lg-4 fixed_title">
-							<h2>What you'll do</h2>
-						</div>
 						<div class="col-lg-8">
-							<div class="pl-lg-4">
-								<p class="lead">"Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei"</p>
-								<p>In ridens tamquam argumentum usu, ne ludus intellegebat vix. Eu inani omnes usu, an pri errem mucius qualisque. Eos posse augue fabellas te. Timeam dolores cu sed. His mollis quaestio scribentur te. Nam et purto integre temporibus.</p>
-								<p>Suas porro eam et, essent dicunt mollis eu ius, sea assum consectetuer ad. Eu albucius vivendum gloriatur vim, ei mei prima choro admodum, eu iudico aliquando cotidieque vim.</p>
-								<h6>Pictures from our users</h6>
-								<div class="pictures magnific-gallery clearfix">
-									<figure><a href="assets/images/gallery/large/adventure_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_1.jpg" alt=""></a></figure>
-									<figure><a href="assets/images/gallery/large/adventure_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_2.jpg" alt=""></a></figure>
-									<figure><a href="assets/images/gallery/large/adventure_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_3.jpg" alt=""></a></figure>
-									<figure><a href="assets/images/gallery/large/adventure_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_4.jpg" alt=""></a></figure>
-									<figure><a href="assets/images/gallery/large/adventure_5.jpg" title="Photo title" data-effect="mfp-zoom-in"><span class="d-flex align-items-center justify-content-center">+10</span><img src="assets/images/gallery/adventure_5.jpg" alt=""></a></figure>
+							<section class="description">
+								<div class="description-block" id="description">
+									<h5 class="mb-4">Description</h5>
+									<p>Dubai is a world-famous shopping hub. On this tour, you will be guided to the top shopping destinations beginning with a stop at ‘City Centre’, one of the biggest malls in Deira Dubai. after which you will proceed to Bur Dubai for a short walk through ‘Bur Juman’ shopping center. After visiting both the malls you will move to explore the bargains at the Gold Souk (market) and savor the aroma of exotic spices while strolling through the spice souk. Gold Souk is packed with hundreds of gold shops and other shops with some unique souvenirs at the old-fashioned yet full-of-life especially Meena Bazaar. At the same time, you will explore Dubai’s multi-ethnic cuisines by making your way to the irresistible Spice Souk.</p>
 								</div>
-								<!-- /pictures -->
-							</div>
-						</div>
-					</div>
-					<!-- /row -->
-
-					<div class="row mb-5">
-						<div class="col-lg-4 fixed_title">
-							<h2>Your itinerary</h2>
-						</div>
-						<div class="col-lg-8">
-							<div class="pl-lg-4">
-								<div class="timeline">
-									<div class="mb-5">
-										<h3>Day one - Trek to the National Park</h3>
-										<figure><img src="assets/images/itinerary_1.jpg" class="img-fluid" alt=""></figure>
-										<p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-										<div class="content_more">
-											<p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-										</div>
-										<!-- /content_more -->
-										<a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
+								<hr>
+								<div class="description-block" id="gallery">
+									<h5 class="mb-4">Gallery</h5>
+									<div class="pictures magnific-gallery clearfix">
+										<figure><a href="assets/images/gallery/large/adventure_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_1.jpg" alt=""></a></figure>
+										<figure><a href="assets/images/gallery/large/adventure_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_2.jpg" alt=""></a></figure>
+										<figure><a href="assets/images/gallery/large/adventure_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_3.jpg" alt=""></a></figure>
+										<figure><a href="assets/images/gallery/large/adventure_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="assets/images/gallery/adventure_4.jpg" alt=""></a></figure>
+										<figure><a href="assets/images/gallery/large/adventure_5.jpg" title="Photo title" data-effect="mfp-zoom-in"><span class="d-flex align-items-center justify-content-center">+10</span><img src="assets/images/gallery/adventure_5.jpg" alt=""></a></figure>
 									</div>
-									<div class="mb-5">
-										<h3>Day two - Dinner and games with great views</h3>
-										<figure><img src="assets/images/itinerary_2.jpg" class="img-fluid" alt=""></figure>
-										<p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-										<div class="content_more">
-											<p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-										</div>
-										<!-- /content_more -->
-										<a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-									</div>
-									<div>
-										<h3>Day three - Hiking down the mountain streams</h3>
-										<figure><img src="assets/images/itinerary_3.jpg" class="img-fluid" alt=""></figure>
-										<p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-										<div class="content_more">
-											<p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-										</div>
-										<!-- /content_more -->
-										<a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-									</div>
-
 								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /row -->
-					<div class="row mb-5">
-						<div class="col-lg-4 fixed_title">
-							<h2>What's included</h2>
-						</div>
-						<div class="col-lg-8">
-							<div class="pl-lg-4">
-								<ul class="bullets bullets--tick">
-									<li>Accommodation for 2 nights in Bangkok at 3 star property.</li>
-									<li>Accommodation for 2 nights in Pattaya at 3 star property.</li>
-									<li>Meals as per itinerary.</li>
+								<hr>
+								<div class="description-block" id="itinerary">
+									<h5 class="mb-4"> Your Itinerary</h5>
+									<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
+										<div class="card">
+											<div class="card-header" role="tab">
+												<h5 class="mb-0">
+													<a data-toggle="collapse" href="#collapseOne_payment" aria-expanded="true"><i class="indicator ti-minus"></i>Day 1 : Arrival at Istanbul</a>
+												</h5>
+											</div>
+				
+											<div id="collapseOne_payment" class="collapse show" role="tabpanel" data-parent="#payment">
+												<div class="card-body">
+													<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+													<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+												</div>
+											</div>
+										</div>
+										<!-- /card -->
+										<div class="card">
+											<div class="card-header" role="tab">
+												<h5 class="mb-0">
+													<a class="collapsed" data-toggle="collapse" href="#collapseTwo_payment" aria-expanded="false">
+														<i class="indicator ti-plus"></i>Day 2 : Istanbul Old City Walking Tour
+													</a>
+												</h5>
+											</div>
+											<div id="collapseTwo_payment" class="collapse" role="tabpanel" data-parent="#payment">
+												<div class="card-body">
+													<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+													<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+												</div>
+											</div>
+										</div>
+										<!-- /card -->
+										<div class="card">
+											<div class="card-header" role="tab">
+												<h5 class="mb-0">
+													<a class="collapsed" data-toggle="collapse" href="#collapseThree_payment" aria-expanded="false">
+														<i class="indicator ti-plus"></i>Day 03: Flight from Istanbul to Cappadocia / North Cappadocia Tour
+													</a>
+												</h5>
+											</div>
+											<div id="collapseThree_payment" class="collapse" role="tabpanel" data-parent="#payment">
+												<div class="card-body">
+													<p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+													<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+												</div>
+											</div>
+										</div>
+										<!-- /card -->
+									</div>
+									<ul class="cbp_tmtimeline d-none">
+										<li>
+											<time class="cbp_tmtime"><span>Day</span>
+											</time>
+											<div class="cbp_tmicon">
+												1
+											</div>
+											<div class="cbp_tmlabel">
+												<h4>Interior of the cathedral</h4>
+												<p>
+													Vero consequat cotidieque ad eam. Ea duis errem qui, impedit blandit sed eu. Ius diam vivendo ne.
+												</p>
+											</div>
+										</li>
+										<li>
+											<time class="cbp_tmtime" datetime="11:30"><span>Day</span>
+											</time>
+											<div class="cbp_tmicon">2</div>
+											<div class="cbp_tmlabel">
+												<h4>Statue of Saint Reparata</h4>
+												<p>
+													Vero consequat cotidieque ad eam. Ea duis errem qui, impedit blandit sed eu. Ius diam vivendo ne.
+												</p>
+											</div>
+										</li>
+										<li>
+											<time class="cbp_tmtime"><span>Day</span>
+											</time>
+											<div class="cbp_tmicon">
+												3
+											</div>
+											<div class="cbp_tmlabel">
+												<h4>Huge clock decorated</h4>
+												<p>
+													Vero consequat cotidieque ad eam. Ea duis errem qui, impedit blandit sed eu. Ius diam vivendo ne.
+												</p>
+											</div>
+										</li>
+										<li>
+											<time class="cbp_tmtime" ><span>Day</span>
+											</time>
+											<div class="cbp_tmicon">
+												4
+											</div>
+											<div class="cbp_tmlabel">
+												<h4>Vasari's fresco</h4>
+												<p>
+													Vero consequat cotidieque ad eam. Ea duis errem qui, impedit blandit sed eu. Ius diam vivendo ne.
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<hr>
+								<div class="description-block" id="include">
+									<h5>Cost Includes</h5>
+									<ul class="bullets bullets--tick">
+										<li>UAE single entry tourist visa</li>
+										<li>Flight from/to Kathmandu-Dubai</li>
+										<li>Pick up and drop off from/to your hotel</li>
+										<li>4 Nights Dubai hotel stay on double sharing basis</li>
+									</ul>
+								</div>
+								<hr>
+								<div class="description-block" id="exclude">
+									<h5>Cost Exclude</h5>
+									<ul class="bullets bullets--tick">
+										<li>GST 5% on total package price</li>
+										<li>TCS (Tax Collected at Source) 5 % applicable on the total price including GST</li>
+										<li>Tourism Dirham Fee to be paid directly at hotel at a time of check-in(Approx. AED 15 to 40 Per Room Per Night depending on the category of the hotel)</li>
+										<li>Entrance tickets to attractions other than mentioned above or optional tours or wherever specified</li>
+									</ul>
+								</div>
+								<hr>
+								<div class="description-block" id="location">
+									<h5>Location</h5>
+									<div class="map map_single mb-5">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.306387423316!2d-74.04668908520766!3d40.68924937933435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sne!2snp!4v1612426609204!5m2!1sne!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+									</div>
+								<!-- End Map -->
+								</div>
+								<ul class="share-buttons">
+									<li><a class="fb-share" href="#0"><i class="social_facebook"></i> Share</a></li>
+									<li><a class="twitter-share" href="#0"><i class="social_twitter"></i> Tweet</a></li>
+									<li><a class="gplus-share" href="#0"><i class="social_googleplus"></i> Share</a></li>
 								</ul>
+							</section>
+						</div>
+						<aside class="col-lg-4" id="sidebar">
+							<div class="box_detail bg-transparent border-0 p-0">
+								<a href="#" class="btn btn-phone d-block text-left icon-btn">
+									<span><i class=" icon_phone"></i></span>	987654321</a>
+								<a href="#" class="btn btn-viber d-block text-left icon-btn"><span>
+									<i class="fab fa-viber"></i>
+								</span>	987654321</a>
+
+							</div>
+							<div class="box_detail d-none ">
+								<div class="box_detail-header">
+									<h5>Booking Contact</h5>
+								</div>
+								
+								<ul>
+									<li>Hunting Line: 01-2365442</li>
+									<li>Toll Free: 01-2365442</li>
+									<li>Email : info@Firefliestravel.com</li>
+								</ul>			
+							</div>
+							<div class="box_detail ">
+								<div class="box_detail-header">
+									<h5>Request A Callback</h5>
+								</div>
+								<div class="box_detail-body">
+									<form action="#" class="inline-form">
+										<input type="text" name="" id="" class="form-control inline-input" placeholder="Your Phone Number">
+										<input type="submit" class="btn_1 inline-btn" value="Send">
+									</form>
+								</div>		
 							</div>
 							
-						</div>
-					</div>
-					<!-- /row -->
-					<div class="row mb-5">
-						<div class="col-lg-4 fixed_title">
-							<h2>What's Excluded</h2>
-						</div>
-						<div class="col-lg-8">
-							<div class="pl-lg-4">
-								<ul class="bullets bullets--close">
-									<li>Anything not mentioned above.</li>
-									<li>Tours that are marked as optional.</li>
-									<li>Meals as per itinerary.</li>
-								</ul>
+							<div class="box_detail ">
+								<div class="box_detail-header">
+									<h5>Get Email This Itinerary</h5>
+								</div>
+								<div class="box_detail-body">
+									<form action="#" class="inline-form">
+										<input type="text" name="" id="" class="form-control inline-input" placeholder="Email Address">
+										<input type="submit" class="btn_1 inline-btn" value="Send">
+									</form>
+								</div>		
+							</div>
+							<div class="box_detail booking">
+								<div class="box_detail-header">
+									<h5>Booking Form</h5>
+								</div>
+								<div class="box_detail-body">
+									<form action="#" class="">
+										<div class="form-group">
+										<div class="form-group input-dates">
+											<input class="form-control" type="text" name="dates" placeholder="When..">
+											<i class="icon_calendar"></i>
+										</div>
+										<div class="panel-dropdown">
+											<a href="#">Guests <span class="qtyTotal">1</span></a>
+											<div class="panel-dropdown-content right">
+												<div class="qtyButtons">
+													<label>Adults</label>
+													<div class="qtyDec"></div><input type="text" name="qtyInput" value="1"><div class="qtyInc"></div>
+												</div>
+												<div class="qtyButtons">
+													<label>Childrens</label>
+													<div class="qtyDec"></div><input type="text" name="qtyInput" value="0"><div class="qtyInc"></div>
+												</div>
+											</div>
+										</div>
+										
+										<input type="submit" class="btn_1 inline-btn w-100" value="Book Now">
+									</form>
+								</div>		
+							</div>
+							<div class="box_detail booking d-none">
+								<div class="price box_detail-header">
+									<h4 class="">NPR 52,200 /-</h4>
+								</div>
+								<div class="form-group input-dates">
+									<input class="form-control" type="text" name="dates" placeholder="When..">
+									<i class="icon_calendar"></i>
+								</div>
+								<!-- <div class="panel-dropdown">
+									<a href="#">Guests <span class="qtyTotal">1</span></a>
+									<div class="panel-dropdown-content right">
+										<div class="qtyButtons">
+											<label>Adults</label>
+											<input type="text" name="qtyInput" value="1">
+										</div>
+										<div class="qtyButtons">
+											<label>Childrens</label>
+											<input type="text" name="qtyInput" value="0">
+										</div>
+									</div>
+								</div> -->
+								<a href="cart-1.html" class="btn_1 full-width purchase">Book Now</a>
+								<div class="text-center"><small>No money charged in this step</small></div>
+								<hr>
+								<div class="box_detail-footer d-flex align-items-center">
+									<h6>Inquiry : </h6>
+									<ul class="d-flex inquiry-icon inquiry-icon--square ml-2">
+										<li><a href="#" class="phone"><i class="fas fa-phone-alt"></i> </a></li>
+										<li><a href="#" class="viber"> <i class="fab fa-viber"></i> </a></li>
+										<li><a href="#" class="whatsapp"> <i class="fab fa-whatsapp"></i> </a></li>
+									</ul>
+								</div>
 							</div>
 							
-						</div>
+						</aside>
 					</div>
 					<!-- /row -->
-					<h4>Location</h4>
-					<div class="map map_single mb-5">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.306387423316!2d-74.04668908520766!3d40.68924937933435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sne!2snp!4v1612426609204!5m2!1sne!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-					</div>
-					<!-- End Map -->
+					
 
 				</div>
 				<!-- /container -->
@@ -326,18 +518,29 @@
     <script src="assets/js/common_scripts.js"></script>
     <script src="assets/js/main.js"></script>
 	<script src="assets/js/validate.js"></script>
-	
-	<!-- SPECIFIC SCRIPTS -->
-	<script src="assets/js/video_header.js"></script>
-	<script>
-		HeaderVideo.init({
-			container: $('.header-video'),
-			header: $('.header-video--media'),
-			videoTrigger: $("#video-trigger"),
-			autoPlayVideo: true
-		});
-	</script>
+	<script defer src="assets/js/jquery.flexslider.js"></script>
+	<script src="assets/js/input_qty.js"></script>
 
+	<script>
+		
+	$(function() {
+	  $('input[name="dates"]').daterangepicker({
+		  autoUpdateInput: false,
+		  parentEl:'.scroll-fix',
+		  minDate:new Date(),
+		  opens: 'left',
+		  locale: {
+			  cancelLabel: 'Clear'
+		  }
+	  });
+	  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+		  $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
+	  });
+	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
+		  $(this).val('');
+	  });
+	});
 	
+	</script>
 </body>
 </html>
