@@ -42,16 +42,16 @@ add_post_type( 'Tour', [
 //    'menu_position' => 5,
     'labels'      => [ 'add_new_item' => "Add new tour" ],
     'supports' => ['title', 'editor','thumbnail'],
-    'taxonomies'  => [ 'tour-category' ],
+    'taxonomies'  => [ 'tour-category','country' ],
     'has_archive' => true,
 ] );
 
-add_post_type( 'Activitie', [
+add_post_type( 'Destination', [
     'public' => true,
 //    'menu_position' => 5,
     'labels'      => [ 'add_new_item' => "Add new hotel" ],
     'supports' => ['title', 'editor','thumbnail','custom-fields'],
-    'taxonomies'  => [ 'Activities-category' ],
+    'taxonomies'  => [ 'Destination-category' ],
     'has_archive' => true,
 ] );
 
@@ -85,23 +85,23 @@ add_post_type( 'Activitie', [
 
 
 $labels = array(
-    'name'                       => _x( 'Activitie Categories', 'taxonomy general name' ),
-    'singular_name'              => _x( 'Activitie Category', 'taxonomy singular name' ),
-    'search_items'               => __( 'Search Activitie Categories' ),
-    'popular_items'              => __( 'Popular Activitie Categories' ),
-    'all_items'                  => __( 'All Activitie Categories' ),
+    'name'                       => _x( 'Destination Categories', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Destinatione Category', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Destination Categories' ),
+    'popular_items'              => __( 'Popular DestinationCategories' ),
+    'all_items'                  => __( 'All Destination Categories' ),
     'parent_item'                => null,
     'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Edit Activitie Category' ),
-    'update_item'                => __( 'Update Activitie Category' ),
-    'add_new_item'               => __( 'Add New Activitie Category' ),
-    'new_item_name'              => __( 'New Activitie Category Name' ),
-    'separate_items_with_commas' => __( 'Separate Activitie categories with commas' ),
-    'add_or_remove_items'        => __( 'Add or remove Activitie categories' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Activitie categories' ),
-    'menu_name'                  => __( ' Activitie Categories' ),
+    'edit_item'                  => __( 'Edit Destination Category' ),
+    'update_item'                => __( 'Update Destination Category' ),
+    'add_new_item'               => __( 'Add New Destination Category' ),
+    'new_item_name'              => __( 'New Destination Category Name' ),
+    'separate_items_with_commas' => __( 'Separate Destination categories with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove Destination categories' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Destination categories' ),
+    'menu_name'                  => __( ' Destination Categories' ),
 );
-add_taxonomy( "activities-category", 'activitie', [
+add_taxonomy( "destination-category", 'destination', [
 	'labels'       => $labels,
 	'hierarchical' => true
 ] );
@@ -128,6 +128,28 @@ add_taxonomy( "tour-category", 'tour', [
 	'labels'       => $labels,
     'hierarchical' => true
 ] );
+$labels = array(
+    'name'                       => _x( 'Countries', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Country', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Countries' ),
+    'popular_items'              => __( 'Popular Countries' ),
+    'all_items'                  => __( 'All Countries' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Country' ),
+    'update_item'                => __( 'Update Country' ),
+    'add_new_item'               => __( 'Add New Country' ),
+    'new_item_name'              => __( 'New Country Name' ),
+    'separate_items_with_commas' => __( 'Separate topics with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove topics' ),
+    'choose_from_most_used'      => __( 'Choose from the most used countries' ),
+    'menu_name'                  => __( 'Countries' ),
+);
+add_taxonomy( 'country', 'tour', [
+    'labels'       => $labels,
+    'hierarchical' => true
+] );
+
 // clear the permalinks after the post type has been registered
 flush_rewrite_rules();
 

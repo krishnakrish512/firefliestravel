@@ -18,32 +18,20 @@
                     <div class="col-lg-8 offset-lg-2">
                         <h3><?php the_sub_field('title'); ?></h3>
                         <p><?php the_sub_field('description'); ?></p>
-                        <form>
-                            <div class="row no-gutters custom-search-input-2">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text"
-                                               placeholder="What are you looking for...">
-                                        <i class="icon_search"></i>
+                        <div class="home-search__content">
+                            <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" id="banner-searchform">
+                                <div class="input-group">
+                                    <input type="text" name="s" class="form-control"
+                                           placeholder="<?php the_sub_field( 'search_placeholder' ); ?>">
+                                    <input type="hidden" name="post_type" value="tour">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"><i class="fas fa-search mr-2"></i>
+                                            SEARCH
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <select class="wide">
-                                        <?php
-                                        $category = get_terms('tour-category');//custom category name
-//                                        $category = get_terms('activitie-category');
-                                        foreach ($category as $catVal) {
-                                            echo '<option value="">' . $catVal->name . '</option>';
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div class="col-lg-2">
-                                    <input type="submit" class="btn_search" value="Search">
-                                </div>
-                            </div>
-                            <!-- /row -->
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
