@@ -46,14 +46,14 @@ add_post_type( 'Tour', [
     'has_archive' => true,
 ] );
 
-add_post_type( 'Destination', [
-    'public' => true,
-//    'menu_position' => 5,
-    'labels'      => [ 'add_new_item' => "Add new hotel" ],
-    'supports' => ['title', 'editor','thumbnail','custom-fields'],
-    'taxonomies'  => [ 'Destination-category' ],
-    'has_archive' => true,
-] );
+//add_post_type( 'Destination', [
+//    'public' => true,
+////    'menu_position' => 5,
+//    'labels'      => [ 'add_new_item' => "Add new hotel" ],
+//    'supports' => ['title', 'editor','thumbnail','custom-fields'],
+//    'taxonomies'  => [ 'Destination-category' ],
+//    'has_archive' => true,
+//] );
 
 //add_post_type( 'Destination', [
 //    'public' => true,
