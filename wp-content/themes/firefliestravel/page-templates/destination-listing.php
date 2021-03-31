@@ -69,7 +69,7 @@ get_header();
                                 <div class="info">
                                     <em></em>
                                     <h3><?= $country->name ?></h3>
-<!--                                    <span>--><?//= $tour_count ?><!-- Tours</span>-->
+                                    <span><?= $tour_count ?> Tours</span>
                                 </div>
                             </figure>
                         </a>

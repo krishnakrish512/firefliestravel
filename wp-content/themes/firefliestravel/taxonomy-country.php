@@ -1,8 +1,11 @@
-<?php get_header(); ?>
+<?php
+get_header();
+
+$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+?>
 <?php while (have_posts()):
     the_post();
     ?>
-
     <div class="clearfix"></div>
     <main>
         <section class="hero_in adventure_detail"
@@ -15,8 +18,7 @@
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <em><?php the_field('trip_days') ?></em></div>
                                 <h1><?php the_field('country_name'); ?></h1>
-                                <!--                                <p>--><?php //the_field('country_name');
-                                ?><!--</p>-->
+                                <!--                                <p>--><?php //the_field('country_name'); ?><!--</p>-->
                             </div>
                             <div class="col-lg-8">
                                 <div class="pl-lg-4">
@@ -40,7 +42,6 @@
             </div>
         </section>
         <!--/hero_in-->
-
         <div class="bg_color_1">
             <nav class="secondary_nav sticky_horizontal">
                 <div class="container">
@@ -51,9 +52,7 @@
                             <li><a href="#itinerary">Itinerary</a></li>
                             <li><a href="#include">Include</a></li>
                             <li><a href="#exclude">Exclude</a></li>
-                            <?php if (get_field('map_image')): ?>
-                                <li><a href="#location">Location</a></li>
-                            <?php endif; ?>
+                            <li><a href="#location">Location</a></li>
                             <li></li>
                         </ul>
                     </div>
@@ -70,14 +69,14 @@
                             </div>
                             <hr>
                             <?php
-                            if (get_field('gallery')) {
-                                get_template_part("partials/single-tour/gallery");
+                            if ( get_field( 'gallery' ) ) {
+                                get_template_part( "partials/single-tour/gallery" );
                             }
                             ?>
                             <hr>
                             <?php
-                            if (have_rows('itinerary_repeater')) {
-                                get_template_part("partials/single-tour/tour", "itinerary");
+                            if ( have_rows( 'itinerary_repeater' ) ) {
+                                get_template_part( "partials/single-tour/tour", "itinerary" );
                             }
                             ?>
                             <hr>
@@ -118,11 +117,11 @@
                                     <!-- End Map -->
                                 </div>
                             <?php endif; ?>
-                            <?php get_template_part("partials/single-tour/tour", "share"); ?>
+                            <?php get_template_part( "partials/single-tour/tour", "share" ); ?>
                         </section>
                     </div>
 
-                    <?php get_template_part("partials/single-tour/sidebar"); ?>
+                    <?php get_template_part( "partials/single-tour/sidebar" ); ?>
                 </div>
                 <!-- /row -->
             </div>
@@ -132,15 +131,6 @@
     </main>
     <!--/main-->
 <?php endwhile; ?>
-
-<?php get_footer(); ?>
-
-
-<!--<script>-->
-<!--    HeaderVideo.init({-->
-<!--        container: $('.header-video'),-->
-<!--        header: $('.header-video--media'),-->
-<!--        videoTrigger: $("#video-trigger"),-->
-<!--        autoPlayVideo: true-->
-<!--    });-->
-<!--</script>-->
+<?php
+get_footer();
+?>

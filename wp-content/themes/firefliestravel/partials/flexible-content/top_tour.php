@@ -5,14 +5,13 @@
 
             <h2><?php the_sub_field('title'); ?></h2>
         </div>
-        <?php $args = [
+        <?php
+        $tour_ids = get_sub_field('tours');
+        $args = [
             'post_type' => 'tour',
-            'orderby' => 'date',
-//    'order' => 'DESC',
             'post_status' => 'publish',
-            'posts_per_page' => 3,
-//            'meta_key' => 'feature_tour',
-//            'meta_value' => 1
+            'post__in' => $tour_ids,
+            'posts_per_page' => 6
         ];
         $tours = get_posts($args);
         ?>
@@ -29,11 +28,7 @@
                             <?= $image; ?>
                             <div class="read_more"><span>Read more</span></div>
                             </a>
-                            <small><?php $terms = get_the_terms($tour->ID, 'tour-category');
-                                foreach ($terms as $term) {
-                                    echo $term_name = $term->name;
-                                }
-                                ?></small>
+                            <small><?php the_field('country_name', $tour->ID); ?></small>
                         </figure>
                         <div class="wrapper">
                             <span class="duration"><i
@@ -43,6 +38,10 @@
                             </h3>
                             <?php if (get_field('price', $tour->ID)): ?>
                                 <span class="price">From <strong>$<?= get_field('price', $tour->ID); ?></strong> /per person</span>
+                            <?php endif; ?>
+                            <?php if (!get_field('price', $tour->ID)): ?>
+                                <a href="<?php the_permalink($tour->ID); ?>"
+                                <h1>Get A Quote Now</h1></a>
                             <?php endif; ?>
                         </div>
                     </div>

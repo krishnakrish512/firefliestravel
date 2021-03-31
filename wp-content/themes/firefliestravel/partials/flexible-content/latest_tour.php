@@ -7,18 +7,19 @@
         <?php if (have_rows('content_repeater')): ?>
 
             <nav class="d-flex justify-content-center">
-                <?php $count = 1; ?>
-                <?php while (have_rows('content_repeater')):
-                    the_row();
-                    ?>
-                    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+
+                <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                    <?php $count = 1; ?>
+                    <?php while (have_rows('content_repeater')):
+                        the_row();
+                        ?>
                         <a href="#tabs-<?= $count; ?> " class="nav-link " id="nav-asia-tab" data-toggle="tab"
                            role="tab"
                            aria-controls="nav-home" aria-selected="true"><?php the_sub_field('nav'); ?></a>
-                    </div>
-                    <?php $count++; endwhile; ?>
-            </nav>
+                        <?php $count++; endwhile; ?>
+                </div>
 
+            </nav>
             <div class="tab-content mb-3" id="nav-tabContent">
                 <?php $count = 1; ?>
                 <?php while (have_rows('content_repeater')):
@@ -57,6 +58,7 @@
                                             <img src="<?= $image ?>" class="img-fluid" alt="">
                                             <div class="media-card--info">
                                                 <h5 class="has-line"><?= $country->name ?></h5>
+                                                <span><?= $tour_count ?> Tours</span>
                                                 <a href="<?= get_term_link($country_id) ?>" class="btn_2">Explore</a>
                                             </div>
                                         </figure>
@@ -69,10 +71,7 @@
             </div>
         <?php endif; ?>
     </div>
-
 </section>
-
-
 </main>
 <!-- /main -->
 
