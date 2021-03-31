@@ -26,7 +26,6 @@ get_header();
             <div class="row">
                 <?php
                 $limit = 12;
-
                 $paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                 $offset = ( $paged - 1 ) * $limit;
 
@@ -60,6 +59,7 @@ get_header();
                 $country_query = new WP_Query( $args );
                 $tour_count    = $country_query->found_posts;
                 wp_reset_query();
+
                 ?>
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <a href="<?= get_term_link($country_id) ?> " class="grid_item latest_adventure">
@@ -69,7 +69,7 @@ get_header();
                                 <div class="info">
                                     <em></em>
                                     <h3><?= $country->name ?></h3>
-                                    <span><?= $tour_count ?> Tours</span>
+<!--                                    <span>--><?//= $tour_count ?><!-- Tours</span>-->
                                 </div>
                             </figure>
                         </a>
