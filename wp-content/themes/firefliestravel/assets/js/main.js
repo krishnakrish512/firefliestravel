@@ -454,6 +454,33 @@
 		$('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
 			$(this).val('');
 		});
+		
+		// tour-item : schedule,faq
+        function ItemShowOut($toggleElement, $classAction) {
+
+            $($toggleElement).on('click', function () {
+
+                $($toggleElement).removeClass($classAction);
+                $($toggleElement).find('p').slideUp();
+                if ($(this).attr('data-click-state') == 1) {
+                    $(this).attr('data-click-state', 0);
+                    $(this).removeClass($classAction);
+                    $(this).find('p').slideUp();
+                } else {
+                    $(this).attr('data-click-state', 1);
+                    $(this).addClass($classAction);
+                    $(this).find('p').slideDown();
+
+                }
+
+                $($toggleElement).not('.' + $classAction).attr('data-click-state', 0);
+
+
+            });
+
+        }
+
+        ItemShowOut('.description-block__itinerary-day', 'schedule-show');
 
 		//search form
 		$('#top_menu .icon_search').on('click', function(){

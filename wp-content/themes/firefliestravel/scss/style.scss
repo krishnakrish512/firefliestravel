@@ -52,6 +52,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 @import 'mixin';
 @import 'blog';
 
+
 /* MAIN NAVIGATION */
 /* All styles for screen size over 992px*/
 @media only screen and (min-width: 992px) {
@@ -69,11 +70,13 @@ Author URI: http://themeforest.net/user/Ansonika/
 		position: relative;
 		z-index: 9;
 		width: auto;
-		top: 18px;
+		//top: 18px;
+		top: 0;
 		right: 15px;
 		float: right;
 		@include transition-default;
 		color: #fff;
+
 		ul,
 		ul li {
 			position: relative;
@@ -466,16 +469,20 @@ ul,ol {
 	}
 }
 
+
+
+
 .main_title_3 {
 	span {
 		width:120px; 
 		height:2px; 
 		background-color:#e1e1e1; 
 		display:block; 
+		margin: auto;
 		em {
 			width:60px; 
 			height:2px; 
-			background-color:$color-1; 
+			background-color:$color-6; 
 			display:block; 
 		}
 	}
@@ -483,7 +490,8 @@ ul,ol {
 	position: relative;
 	@include mobile {margin-bottom: 10px;}
 	h2,h3 {
-		@include fontSize(23px);
+		@include fontSize(28px);
+		color : $color_2;
 		margin:25px 0 0 0;
 		@include mobile {@include fontSize(21px);}
 	}
@@ -522,22 +530,23 @@ a {
 	&:hover, &:focus {color: #111;text-decoration: none; outline:none;}
 }
 /*-------- 1.2 Buttons --------*/
-a.btn_1,
-.btn_1 {
-    border: none;
-    color: #fff;
-    background: $color-1;
-    outline: none;
+[class*='btn_']{
+	border: none;
+	color: #fff;
+	outline: none;
 	cursor: pointer;
     display: inline-block;
     text-decoration: none;
     padding: 15px 30px;
-    color: #fff;
-    font-weight: 600;
+	font-weight: 600;
     text-align: center;
     line-height: $line-height-none;
 	@include transition-default;
 	@include border-radius(3px); 
+}
+a.btn_1,
+.btn_1 {
+    background: $color-1;
 	&:hover {background: $color-2; color:#fff;}
 	&.full-width{
 		display: block;
@@ -571,6 +580,15 @@ a.btn_1,
 		&:focus {outline: none;}
 	}
 }
+a.btn_2,
+.btn_2{
+	background-color: $color-2;
+	&:hover{
+		background-color: $color-1;
+		color: #fff;
+	}
+}
+
 
 .closebt {
 	@include transition-default;
@@ -653,8 +671,8 @@ header {
 		}
 		&.sticky {
 			@include transition-default;
-			border-bottom: 1px solid $border-color-2;
-			background-color: #fff;
+			//border-bottom: 1px solid $border-color-2;
+			//background-color: #fff;
 			padding: 15px 20px;
 			position: fixed !important;
 			@include tablet {
@@ -682,7 +700,7 @@ header {
 
 ul#top_menu {
 	float: right;
-	margin: 0 0 0 10px;
+	margin: 9px 0 0 10px;
 	padding: 0;
 	@include fontSize(13px);
 	@include tablet {
@@ -703,13 +721,13 @@ ul#top_menu {
 		}
 		@include mobile {
 			&:first-child {
-			display: none;
-		}
+				display: none;
+			}
 		}
 		a {
-			color: #fff;
+			color: #000;
 			&:hover {
-				color: #fff;
+				color: $color-1;
 				opacity: 0.7;
 			}
 			&.login,
@@ -1548,8 +1566,11 @@ html[xmlns] .flexslider .slides {
 #slider.flexslider {
 	overflow: hidden;
 	.flex-direction-nav {
-		opacity: 0;
-		display: none;
+		// opacity: 0;
+		// display: none;
+		top: 50%;
+				transform: translateY(-50%);
+		
 	}
 	ul.slides {
 		li {
@@ -1576,6 +1597,32 @@ html[xmlns] .flexslider .slides {
 				@include mobile {
 					height: 500px!important;
 					width: auto;
+				}
+			}
+			.meta{
+				left:0;
+				right:0;
+				bottom: inherit;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	ul.flex-direction-nav{
+		li{
+			a{
+				opacity: 1;
+				height: 45px;
+				
+			}
+			&.flex-nav-prev{
+				a{
+					left: 30px;
+				}
+			}
+			&.flex-nav-next{
+				a{
+					right: 30px;
 				}
 			}
 		}
@@ -2250,10 +2297,10 @@ video {
 	background: $color-2 !important;
 }
 
-.owl-theme .owl-dots .owl-dot span {
-    width: 13px!important;
-    height: 13px!important;
-}
+// .owl-theme .owl-dots .owl-dot span {
+//     width: 13px!important;
+//     height: 13px!important;
+// }
 
 a.box_news {
 	position: relative;
@@ -2685,7 +2732,7 @@ a.box_feat {
 		margin-bottom: 0;
 		overflow: hidden;
 		position: relative;
-		height: 210px;
+		height: 300px;
 		small {
 			position: absolute;
 			@include rgba(bg, #000, 0.6);
@@ -2739,11 +2786,13 @@ a.box_feat {
 				@include transform (translate(-50%, -50%) scale(1));
 			}
 		}
+		
+			
 	}
 	.wrapper {
 		padding: 25px;
 		h3 {
-			@include fontSize(20px);
+			//@include fontSize(20px);
 			margin-top: 0;
 		}
 	}
@@ -2762,6 +2811,7 @@ a.box_feat {
 			}
 		}
 	}
+
 }
 
 .cat_star {
@@ -3229,29 +3279,36 @@ section#reviews {
 	}
 }
 .box_detail {
-	padding: 25px 25px 15px 25px;
+	padding: 0 25px 15px 25px;
 	border: 1px solid $border-color-2;
 	background-color: #f8f8f8;
 	@include border-radius(5px);
 	margin-bottom: 30px;
-	.price {
-		line-height: $line-height-none;
+	&-header{
 		border-bottom: 1px solid $border-color-2;
 		margin: 0 -25px 25px -25px;
-		padding: 0 25px 15px 25px;
-		>span {
-			@include fontSize(31px);
-			font-weight: 600;
-			>small {
-				@include fontSize(11px);
-				font-weight: 500;
+		padding: 15px 25px;
+		line-height: $line-height-none;
+		h4{
+			margin-bottom : 0;
+		}
+		&.price {
+			>span {
+				@include fontSize(31px);
+				font-weight: 600;
+				>small {
+					@include fontSize(11px);
+					font-weight: 500;
+				}
+			}
+			.score {
+				float: right;
+				margin-top: -5px;
 			}
 		}
-		.score {
-			float: right;
-			margin-top: -5px;
-		}
 	}
+	
+
 	h3 {
 		@include fontSize(20px);
 		margin: 25px 0 10px 0;
@@ -5233,6 +5290,25 @@ header {
 			    background-color: #444;
 			}
         }
+		&_bg-secondary{
+			background-color: $color-2;
+			.main-menu{
+				ul{
+					li{
+						 a{
+							 color: #fff;
+						 }
+					}
+				}
+			}
+			ul#top_menu{
+				li{
+					a{
+						color: #fff ;
+					}
+				}
+			}
+		}
     }
 }
 .full-height {
@@ -5534,6 +5610,7 @@ a.address {
 
 /*-------- 2.16 OpenStreet Map --------*/
 @import "leaflet.scss";
+@import "flaticon";
 /*============================================================================================*/
 /* 3.  COMMON */
 /*============================================================================================*/
@@ -5571,7 +5648,7 @@ a.address {
 }
 
 .box_1 {
-	background-color: $color-1;
+	background-color: $color-6;
 	color: #fff;
 	padding: 45px;
 	opacity: 0;	
@@ -7030,3 +7107,82 @@ ul.plan-features {
 		display: none;
 	}
 }
+
+.inquiry-icon{
+	li{
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+		a{
+			display:block;
+			width: 35px;
+			height:	35px;
+			background-color: #ccc;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 35px;
+			color: inherit;
+			font-size: 18px;
+			i{
+				margin-right: 0;
+			}
+			&.phone{
+				font-size: 15px;
+			}
+			&.viber{
+				&:hover{
+					background-color: #665CAC;
+				}
+			}
+			&.whatsapp{
+				&:hover{
+					background-color: #25D366;
+				}
+			}
+			&:hover{
+				background-color: $color-1;
+				color	: #fff;
+			}
+		}
+	}
+
+}
+
+.grid-tile{
+	overflow: hidden;
+	margin-left: -5px;
+	margin-right: -5px;
+	&-item{
+		width: 25%;
+		float: left;
+		padding-left: 5px;
+		padding-right: 5px;
+		.media-card{
+			figure{
+				&:after{
+					padding-bottom: 80%;
+				}
+			}
+		}
+		&:first-child{
+			width: 50%;
+			.media-card{
+				figure{
+					&:after{
+						padding-bottom: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+@import 'custom';
+
