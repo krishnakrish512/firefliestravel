@@ -1,10 +1,38 @@
+p:emty{
+    display: none;
+    &::before{
+        display: none;
+    }
+}
 .header{
-    padding: 0;
+    padding: 52px 0 0 ;
     &-top{
         background-color: $color-2;
-        padding: 10px 0;
+        padding: 5px 0;
+        position: absolute;
+        width: 100%;
+        z-index: 22;
+        top: 0;
+        left:0;
+        @include transition-default();
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--logo{
+            opacity: 0;
+            visibility: hidden;
+            @include transition-default();
+            img{
+                width: 150px;
+            }
+        }
+
         ul{
             margin-bottom: 0;
+            margin-left: auto;
             li{
                 display: inline-block;
                 &:not(:first-child){
@@ -23,6 +51,10 @@
             right:0;
             z-index: 2;
             padding: 20px 0;
+            .header-top--logo{
+                opacity: 1;
+                visibility: visible;
+            }
             ul{
                 li{
                     a  {
@@ -36,6 +68,10 @@
         padding: 20px 0;
         position: relative;
         .main-menu{
+
+            @include tablet-up{
+                top:6px;
+            }
             ul {
                 li{
                     a{
@@ -134,10 +170,12 @@
             }
         }
         .price{
-            border-top: 1px solid $border-color-3;
-            display: block;
-            padding-top: 15px;
+            
         }
+    }
+    &--footer{
+        border-top: 1px solid $border-color-3;
+            padding-top: 15px;
     }
 
     figure{
