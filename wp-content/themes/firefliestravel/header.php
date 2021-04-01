@@ -18,11 +18,14 @@
           href="img/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
           href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
-    <?php wp_head(); ?>
+        <?php wp_head(); ?>
 
 </head>
 
@@ -34,12 +37,14 @@
         <div class="header-top">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="header-top--logo">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri()."/assets/images/logo-white.png"?>" alt="" width='180'>
+                    <a href="<?= get_home_url(); ?>">
+                        <img src=" <?= $contact['header_logo'] ?>" alt=""
+                             width='180'>
                     </a>
                 </div>
                 <ul class="list-inline">
-                    <li><a href="tel: +977 9802050692"> <i class="icon_phone"></i><?= $contact['header_number'] ?></a></li>
+                    <li><a href="tel: +977 9802050692"> <i class="icon_phone"></i><?= $contact['header_number'] ?></a>
+                    </li>
                     <li><a href="tel: info@firefliestravel.com.np"> <i class="icon_mail"></i>
                             <?= $contact['header_email'] ?> </a></li>
                 </ul>
@@ -56,6 +61,8 @@
 //                            var_dump($logo);
 //                            exit();
                     } ?>
+
+
                     <a href="<?= get_home_url(); ?>">
                         <img src="<?php echo $logo; ?>" width="150" height="36" alt="" class="logo_normal">
                         <img src="<?php echo $logo; ?>g" width="150" height="36" alt="" class="logo_sticky">
@@ -83,7 +90,7 @@
                     )); ?>
                 </nav>
             </div>
-            <form action="<?php echo esc_url( home_url( '/' ) ); ?>" class="top-search-form">
+            <form action="<?php echo esc_url(home_url('/')); ?>" class="top-search-form">
                 <div class="container">
                     <input type="text" class="form-control" placeholder="Type & Hit Enter...">
                 </div>

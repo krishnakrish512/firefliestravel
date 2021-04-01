@@ -11,8 +11,9 @@
             <div class="col-lg-4 col-md-6 pl-md-4">
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
-                    <li><a href="tel://61280932400"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
-                    <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> <?= $contact['footer_email'] ?></a>
+                    <li><a href="tel://+977 9802050692"><i class="ti-mobile"></i> <?= $contact['phone_number'] ?></a></li>
+                    <li><a href="tel://+977 12345667"><i class="icon_phone"></i> <?= $contact['landline_number'] ?></a></li>
+                    <li><a href="mailto:info@firefliestravel.com.np"><i class="ti-email"></i> <?= $contact['footer_email'] ?></a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +49,7 @@
             </div>
             <div class="col-lg-6">
                 <ul id="additional_links">
-                    <li><a href="https://nirvan.studio/firefliestravel/terms-and-conditions/">Terms and conditions</a></li>
+                    <li class="d-none"><a href="https://nirvan.studio/firefliestravel/terms-and-conditions/">Terms and conditions</a></li>
                     <li class="d-none"><a href="#0">Privacy</a></li>
                     <li><span>© <?php echo date('Y'); ?> Fireflies Travel and Tours Pvt. Ltd.</span></li>
                 </ul>

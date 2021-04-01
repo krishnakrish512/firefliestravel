@@ -20,13 +20,12 @@
                 <li>
                     <i class="pe-7s-mail-open-file"></i>
                     <h4>Email address</h4>
-                    <span><?= $contact['email_address'] ?><br><small>Monday to Friday 9am - 7pm</small></span>
-
+                    <span><?= $contact['email_address'] ?><br> <?= $contact['website_url'] ?></span>
                 </li>
                 <li>
                     <i class="pe-7s-phone"></i>
                     <h4>Contacts info</h4>
-                    <span><?= $contact['contact_number'] ?><br><small>Monday to Friday 9am - 7pm</small></span>
+                    <span><?= $contact['contact_number'] ?><br> <?= $contact['landline_number'] ?></span>
                 </li>
             </ul>
         </div>
