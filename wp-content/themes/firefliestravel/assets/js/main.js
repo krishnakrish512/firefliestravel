@@ -492,6 +492,10 @@
 			$('.top-search-form').removeClass('is-open');
 			$('#top_menu .icon_close').hide();
 		})
+
+
+		$('.nav-tabs .nav-link:first').addClass('active');
+		$('.tab-content .tab-pane:first').addClass('show active');
 		
 	
 })(window.jQuery);
