@@ -64,7 +64,7 @@
                     <div class="col-lg-8">
                         <section class="description">
                             <div class="description-block" id="description">
-                                <h5 class="mb-4">Description</h5>
+                                <h5 class="mb-4 d-none">Description</h5>
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php the_content(); ?></p>
                             </div>
