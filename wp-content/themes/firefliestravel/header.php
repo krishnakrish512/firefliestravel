@@ -32,7 +32,12 @@
 
     <header class="header  position-static clearfix">
         <div class="header-top">
-            <div class="container">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="header-top--logo">
+                    <a href="#">
+                        <img src="<?php echo get_template_directory_uri()."/assets/images/logo-white.png"?>" alt="" width='180'>
+                    </a>
+                </div>
                 <ul class="list-inline">
                     <li><a href="tel: +977 9802050692"> <i class="icon_phone"></i><?= $contact['header_number'] ?></a></li>
                     <li><a href="tel: info@firefliestravel.com.np"> <i class="icon_mail"></i>
