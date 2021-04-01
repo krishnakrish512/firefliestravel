@@ -74,5 +74,13 @@
 </section>
 </main>
 <!-- /main -->
+<script>
+
+    // $('#nav-asia-tab a'){
+    //     e.preventDefault()
+    //     $(this).tab('show')
+    // }
+
+</script>
 
 
