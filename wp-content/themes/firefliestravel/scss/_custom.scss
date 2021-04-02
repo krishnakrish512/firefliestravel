@@ -1,10 +1,38 @@
+p:emty{
+    display: none;
+    &::before{
+        display: none;
+    }
+}
 .header{
-    padding: 0;
+    padding: 52px 0 0 ;
     &-top{
         background-color: $color-2;
-        padding: 10px 0;
+        padding: 5px 0;
+        position: absolute;
+        width: 100%;
+        z-index: 22;
+        top: 0;
+        left:0;
+        @include transition-default();
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--logo{
+            opacity: 0;
+            visibility: hidden;
+            @include transition-default();
+            img{
+                width: 150px;
+            }
+        }
+
         ul{
             margin-bottom: 0;
+            margin-left: auto;
             li{
                 display: inline-block;
                 &:not(:first-child){
@@ -23,6 +51,10 @@
             right:0;
             z-index: 2;
             padding: 20px 0;
+            .header-top--logo{
+                opacity: 1;
+                visibility: visible;
+            }
             ul{
                 li{
                     a  {
@@ -36,6 +68,10 @@
         padding: 20px 0;
         position: relative;
         .main-menu{
+
+            @include tablet-up{
+                top:6px;
+            }
             ul {
                 li{
                     a{
@@ -114,9 +150,6 @@
     }
 }
 
-
-
-
 .box_grid{
     .wrapper{
         h3{
@@ -134,10 +167,12 @@
             }
         }
         .price{
-            border-top: 1px solid $border-color-3;
-            display: block;
-            padding-top: 15px;
+            
         }
+    }
+    &--footer{
+        border-top: 1px solid $border-color-3;
+            padding-top: 15px;
     }
 
     figure{
@@ -485,29 +520,60 @@
     }
 }
 
-.description-block{
-    &__itinerary-day{
+.accordion-slide{
+    &-item{
         border: 0;
 		margin-bottom: 5px;
         padding: 20px 20px 0;
+        background: #fff;
 		@include box-shadow (0px 0px 15px 0px rgba(0, 0, 0, 0.05));
-        .itinerary-header{
-            display: block;
-            background-color: #fff;
-			cursor: pointer;
-			padding-bottom: 20px;
-            span{
-                float: right;
-                margin-top: 7px;
-                color: $color-1;
-            }
-        }
+        
         p{
             padding:20px 0;
             border-top: 1px solid $border-color-2;
         }
 
     }
+    &-header{
+        display: block;
+        background-color: #fff;
+        cursor: pointer;
+        padding-bottom: 20px;
+        span{
+            float: right;
+            margin-top: 2px;
+            color: $color-1;
+        }
+    }
 }
 
 
+.sticky-bottom-contact{
+    position: fixed;
+    bottom: -22px;
+    right: 90px;
+    z-index: 22;
+    ul{
+
+        li{
+            display: inline-block;
+            a{
+                background-color: #f99e1c;
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 14px;
+                i{
+                    margin-right: 5px;
+                }
+                .icon_phone{
+                    font-size: 12px
+                }
+
+                &:hover{
+                    background-color: $color-2;
+                }
+
+            }
+        }
+}
+}

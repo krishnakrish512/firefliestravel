@@ -309,7 +309,7 @@
 		} else {
 			$('.sticky_horizontal').stick_in_parent({
 				bottoming:false,
-				offset_top: 65
+				offset_top: 83
 			});
 		}
 	});
@@ -480,7 +480,7 @@
 
         }
 
-        ItemShowOut('.description-block__itinerary-day', 'schedule-show');
+        ItemShowOut('.accordion-slide-item', 'is-open');
 
 		//search form
 		$('#top_menu .icon_search').on('click', function(){
