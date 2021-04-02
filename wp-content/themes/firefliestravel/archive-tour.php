@@ -40,13 +40,16 @@
                             <div class="wrapper">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php the_field('intro_text'); ?></p>
+                                <div class="box_grid--footer">
                                 <?php if (get_field('price')): ?>
                                     <span class="price">From <strong>$<?php the_field('price'); ?></strong> /per person</span>
                                 <?php endif; ?>
                                 <?php if (!get_field('price')): ?>
-                                    <a href="<?php the_permalink(); ?>"
-                                    <h1>Get A Quote Now</h1></a>
+                                    <a href="<?php the_permalink(); ?>">
+                                    Get A Quote Now</a>
                                 <?php endif; ?>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>

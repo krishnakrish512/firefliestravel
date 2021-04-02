@@ -1,3 +1,4 @@
+<section class="bg_color_1">
 <div class="container margin_80_55">
     <div class="main_title_2">
         <span><em></em></span>
@@ -20,6 +21,8 @@
     </div>
     <!-- /carousel -->
 </div>
+</section>
+
 <!--/container-->
 </main>
 <!--/main-->
