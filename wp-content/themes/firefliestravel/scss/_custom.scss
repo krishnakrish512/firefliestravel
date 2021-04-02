@@ -150,9 +150,6 @@ p:emty{
     }
 }
 
-
-
-
 .box_grid{
     .wrapper{
         h3{
@@ -523,28 +520,29 @@ p:emty{
     }
 }
 
-.description-block{
-    &__itinerary-day{
+.accordion-slide{
+    &-item{
         border: 0;
 		margin-bottom: 5px;
         padding: 20px 20px 0;
 		@include box-shadow (0px 0px 15px 0px rgba(0, 0, 0, 0.05));
-        .itinerary-header{
-            display: block;
-            background-color: #fff;
-			cursor: pointer;
-			padding-bottom: 20px;
-            span{
-                float: right;
-                margin-top: 7px;
-                color: $color-1;
-            }
-        }
+        
         p{
             padding:20px 0;
             border-top: 1px solid $border-color-2;
         }
 
+    }
+    &-header{
+        display: block;
+        background-color: #fff;
+        cursor: pointer;
+        padding-bottom: 20px;
+        span{
+            float: right;
+            margin-top: 7px;
+            color: $color-1;
+        }
     }
 }
 

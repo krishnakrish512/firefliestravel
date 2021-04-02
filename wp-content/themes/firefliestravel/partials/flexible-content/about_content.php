@@ -12,12 +12,12 @@
                 </figure>
             </div>
             <div class="col-lg-6">
-                <div class=" accordion_2" id="accordionExample">
+                <div class=" accordion_2 accordion-slide" id="accordionExample">
                     <?php while (have_rows('card_repeater')):
                         the_row()
                         ?>
-                        <div class="description-block__itinerary-day">
-                                    <span class="itinerary-header"><?php the_sub_field('title'); ?><span
+                        <div class="description-block__itinerary-day accordion-slide-item">
+                                    <span class="itinerary-header accordion-slide-header"><?php the_sub_field('title'); ?><span
                                                 class="icon-angle-down"></span></span>
                             <p style="display: none;"> <?php the_sub_field('description'); ?></p>
                         </div>

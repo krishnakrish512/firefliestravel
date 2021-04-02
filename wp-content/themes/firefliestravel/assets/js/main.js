@@ -480,7 +480,7 @@
 
         }
 
-        ItemShowOut('.description-block__itinerary-day', 'schedule-show');
+        ItemShowOut('.accordion-slide-item', 'is-open');
 
 		//search form
 		$('#top_menu .icon_search').on('click', function(){
