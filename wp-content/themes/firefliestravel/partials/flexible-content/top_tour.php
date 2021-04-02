@@ -24,7 +24,7 @@
                     <div class="box_grid box_grid--2">
                         <?php $image = get_the_post_thumbnail($tour->ID, 'category-thumb'); ?>
                         <figure>
-                            <a href="<?= get_the_permalink($tour->ID); ?>"">
+                            <a href="<?= get_the_permalink($tour->ID); ?>">
                             <?= $image; ?>
                             <div class="read_more"><span>Read more</span></div>
                             </a>

@@ -1,5 +1,5 @@
 <?php $image = get_sub_field('image_url') ?>
-<section class="testimonial bg-overlay" style="background-image: url('<?=$image?>'');">
+<section class="testimonial bg-overlay" style="background-image: url('<?=$image?>');">
     <div class="container">
         <div class="row">
             <?php

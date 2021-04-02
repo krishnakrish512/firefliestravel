@@ -3,134 +3,61 @@ get_header();
 
 $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 ?>
-<?php while (have_posts()):
-    the_post();
-    ?>
-    <div class="clearfix"></div>
-    <main>
-        <section class="hero_in adventure_detail"
-                 style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')">
-            <div class="wrapper opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-                <div class="container">
-                    <div class="main_info">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <em><?php the_field('trip_days') ?></em></div>
-                                <h1><?php the_field('country_name'); ?></h1>
-                                <!--                                <p>--><?php //the_field('country_name'); ?><!--</p>-->
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="pl-lg-4">
-                                    <h3><?php the_title(); ?></h3>
-                                    <ul>
-                                        <?php while (have_rows('list_repeater')):
-                                            the_row()
-                                            ?>
-                                            <li>
-                                                <i class="<?php the_sub_field('icons'); ?>"></i><?php the_sub_field('title'); ?>
-                                            </li>
-                                        <?php endwhile; ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                    </div>
-                    <!-- /main_info -->
-                </div>
-            </div>
-        </section>
-        <!--/hero_in-->
-        <div class="bg_color_1">
-            <nav class="secondary_nav sticky_horizontal">
-                <div class="container">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <ul class="clearfix">
-                            <li><a href="#description" class="active">Description</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#itinerary">Itinerary</a></li>
-                            <li><a href="#include">Include</a></li>
-                            <li><a href="#exclude">Exclude</a></li>
-                            <li><a href="#location">Location</a></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="container margin_60_35">
-                <div class="row mb-5">
-                    <div class="col-lg-8">
-                        <section class="description">
-                            <div class="description-block" id="description">
-                                <h5 class="mb-4">Description</h5>
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php the_content(); ?></p>
-                            </div>
-                            <hr>
-                            <?php
-                            if ( get_field( 'gallery' ) ) {
-                                get_template_part( "partials/single-tour/gallery" );
-                            }
-                            ?>
-                            <hr>
-                            <?php
-                            if ( have_rows( 'itinerary_repeater' ) ) {
-                                get_template_part( "partials/single-tour/tour", "itinerary" );
-                            }
-                            ?>
-                            <hr>
-                            <div class="description-block" id="include">
-                                <h5>Cost Includes</h5>
-                                <ul class="bullets bullets--tick">
-                                    <?php while (have_rows('cost_included')):
-                                        the_row()
-                                        ?>
-                                        <li>
-                                            <?php the_sub_field('list'); ?>
-                                        </li>
-                                    <?php endwhile; ?>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="description-block" id="exclude">
-                                <h5>Cost Exclude</h5>
-                                <ul class="bullets bullets--tick">
-                                    <?php while (have_rows('cost_excluded')):
-                                        the_row()
-                                        ?>
-                                        <li>
-                                            <?php the_sub_field('list'); ?>
-                                        </li>
-                                    <?php endwhile; ?>
-                                </ul>
-                            </div>
-                            <hr>
-                            <?php if (get_field('map_image')): ?>
-                                <div class="description-block" id="location">
-                                    <h5>Location</h5>
-                                    <div class="map map_single mb-5">
-                                        <?php
-                                        $map_image = get_field('map_image'); ?>
-                                        <img src="<?= $map_image; ?>" alt="google map" class="img-fluid">
-                                    </div>
-                                    <!-- End Map -->
-                                </div>
-                            <?php endif; ?>
-                            <?php get_template_part( "partials/single-tour/tour", "share" ); ?>
-                        </section>
-                    </div>
-
-                    <?php get_template_part( "partials/single-tour/sidebar" ); ?>
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
+<?php $image = get_field('country_image', 'option'); ?>
+<section class="hero_in tours" style="background-image: url('<?= $image; ?>')">
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="fadeInUp"><span></span><?php the_field('country_title', 'option') ?></h1>
         </div>
-        <!-- /bg_color_1 -->
-    </main>
-    <!--/main-->
-<?php endwhile; ?>
+    </div>
+</section>
+<section class="margin_60_35 bg_color_1">
+    <div class="container">
+        <div class="destination-item-aside__relate-tour__tittle">
+            <div class="section-tittle">
+                <h2>Discover</h2>
+                <div class="section-tittle__line-under"></div>
+                <p><?= $term->name ?> <span>Tour</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <?php while (have_posts()):
+                the_post();
+                global $post;
+
+                $image = get_the_post_thumbnail($post->ID, 'thumb-crazy');
+                ?>
+
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="box_grid box_grid--2">
+                        <?php $image = get_the_post_thumbnail($post->ID, 'category-thumb'); ?>
+                        <figure>
+                            <a href="<?= get_the_permalink($post->ID); ?>"">
+                            <?= $image; ?>
+                            <div class="read_more"><span>Read more</span></div>
+                            </a>
+                            <small><?php the_field('country_name', $post->ID); ?></small>
+                        </figure>
+                        <div class="wrapper">
+                            <span class="duration"><i
+                                        class="icon_clock_alt"></i> <?php the_field('trip_days', $post->ID) ?></span>
+                            <h3>
+                                <a href="<?= get_the_permalink($post->ID); ?>"><?= get_the_title($post->ID); ?></a>
+                            </h3>
+                            <?php if (get_field('price', $post->ID)): ?>
+                                <span class="price">From <strong>$<?= get_field('price', $post->ID); ?></strong> /per person</span>
+                            <?php endif; ?>
+                            <?php if (!get_field('price', $post->ID)): ?>
+                                <a href="<?php the_permalink($post->ID); ?>"
+                                <h1>Get A Quote Now</h1></a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</section>
 <?php
 get_footer();
 ?>
