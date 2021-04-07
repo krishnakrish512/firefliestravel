@@ -45,7 +45,8 @@ $contact = get_field('contact', 'option');
             <h5>Booking Form</h5>
         </div>
         <div class="box_detail-body">
-            <?= do_shortcode('[contact-form-7 id="' . get_field('enquiry_form', 'option') . '"]') ?>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
+               class="btn_1 full-width purchase mb-3">Book Your Tour Now</a>
         </div>
     </div>
     <div class="box_detail booking d-none">

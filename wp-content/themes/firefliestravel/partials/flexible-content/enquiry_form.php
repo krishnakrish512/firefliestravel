@@ -5,16 +5,7 @@ if (($_GET['tour_id'])) {
 //        var_dump($tour_name);
 //        exit();
 }
-if (($_GET['ativitie_id'])) {
-    $activitie_id = $_GET['ativitie_id'];
-    $activitie_name = get_the_title($activitie_id);
-//        var_dump($activitie_name);
-//        exit();
-}
-
-
 ?>
-
 
 <div class="clearfix"></div>
 <main>
@@ -39,7 +30,7 @@ if (($_GET['ativitie_id'])) {
                     ?>
                     <section class="inquiry-form-content booking pr-5">
                         <h5 class="mb-4">Tour Inquiry Form</h5>
-                        <?php echo do_shortcode("[contact-form-7 id=\"162\" title=\"Enquiry Form\"]") ?>
+                        <?= do_shortcode('[contact-form-7 id="' . get_field('enquiry_form', 'option') . '"]') ?>
                     </section>
                 </div>
                 <!-- /col -->
@@ -78,6 +69,6 @@ if (($_GET['ativitie_id'])) {
 </main>
 <!--/main-->
 <script>
-    jQuery('[name="tour"]').val('<?= $tour_name, $activitie_name ?>');
+    jQuery('[name="tour"]').val('<?= $tour_name ?>');
 
 </script>

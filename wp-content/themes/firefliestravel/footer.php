@@ -59,16 +59,16 @@
             </div>
         </div>
     </div>
-    
+
 </footer>
 <!--/footer-->
 </div>
 <!-- page -->
 <div class="sticky-bottom-contact">
     <ul class="inline-list">
-        <li><a href="#"> <i class="icon_phone"></i> Call Us</a></li>
-        <li><a href="#"><i class="fab fa-viber"></i> Viber</a></li>
-        <li><a href="#"><i class="icon-mail-4"></i> Email Us</a></li>
+        <li><a href="tel: +977 9802050692"> <i class="icon_phone"></i> Call Us</a></li>
+        <li><a href="viber://chat?number=%2B<?= $contact['viber_number'] ?>"><i class="fab fa-viber"></i> Viber</a></li>
+        <li><a href="https://wa.me/<?= $contact['whatsapp_number'] ?>"><i class="fab fa-whatsapp"></i> whatsapp</a></li>
     </ul>
 </div>
 <div id="toTop"></div><!-- Back to top button -->

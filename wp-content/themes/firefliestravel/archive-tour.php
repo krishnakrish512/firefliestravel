@@ -38,26 +38,22 @@
                                 </figure>
                             <?php endif; ?>
                             <div class="wrapper">
-<<<<<<< HEAD
+
                             <span class="duration"><i
-                                    class="icon_clock_alt"></i> <?php the_field('trip_days') ?></span>
-                                <h3>
-                                    <a href="<?= get_the_permalink(); ?>"><?= get_the_title(); ?></a>
-                                </h3>
-=======
+                                        class="icon_clock_alt"></i> <?php the_field('trip_days') ?></span>
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <p><?php the_field('intro_text'); ?></p>
+<!--                                <p>--><?php //the_field('intro_text'); ?><!--</p>-->
                                 <div class="box_grid--footer">
->>>>>>> e17c86f1d9afe9ce923b10a99d58a5b013721270
-                                <?php if (get_field('price')): ?>
-                                    <span class="price">From <strong>$<?= get_field('price'); ?></strong> /per person</span>
-                                <?php endif; ?>
-                                <?php if (!get_field('price')): ?>
-                                    <a href="<?php the_permalink(); ?>">
-                                    Get A Quote Now</a>
-                                <?php endif; ?>
+
+                                    <?php if (get_field('price')): ?>
+                                        <span class="price">From <strong>$<?= get_field('price'); ?></strong> /per person</span>
+                                    <?php endif; ?>
+                                    <?php if (!get_field('price')): ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            Get A Quote Now</a>
+                                    <?php endif; ?>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
