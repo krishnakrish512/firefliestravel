@@ -65,7 +65,7 @@
     <ul class="inline-list">
         <li><a href="#"> <i class="icon_phone"></i> Call Us</a></li>
         <li><a href="#"><i class="fab fa-viber"></i> Viber</a></li>
-        <li><a href="#"><i class="icon-mail-4"></i> Email Us</a></li>
+        <li><a href="#"><i class="fab fa-whatsapp"></i>Whatsapp </a></li>
     </ul>
 </div>
 <div id="toTop"></div><!-- Back to top button -->

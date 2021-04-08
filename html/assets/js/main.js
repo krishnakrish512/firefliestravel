@@ -309,7 +309,7 @@
 		} else {
 			$('.sticky_horizontal').stick_in_parent({
 				bottoming:false,
-				offset_top: 65
+				offset_top: 83
 			});
 		}
 	});
@@ -454,20 +454,8 @@
 		$('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
 			$(this).val('');
 		});
-
-		//search form
-		$('#top_menu .icon_search').on('click', function(){
-			$('.top-search-form').addClass('is-open');
-			$('#top_menu .icon_close').show();
-			
-		})
-		$('#top_menu .icon_close').on('click', function(){
-			$('.top-search-form').removeClass('is-open');
-			$('#top_menu .icon_close').hide();
-		})
-
-		//------------------------------  ITEM SHOW OUT -----------------------------------------
-        // tour-item : schedule,faq
+		
+		// tour-item : schedule,faq
         function ItemShowOut($toggleElement, $classAction) {
 
             $($toggleElement).on('click', function () {
@@ -492,7 +480,22 @@
 
         }
 
-        ItemShowOut('.description-block__itinerary-day', 'schedule-show');
+        ItemShowOut('.accordion-slide-item', 'is-open');
+
+		//search form
+		$('#top_menu .icon_search').on('click', function(){
+			$('.top-search-form').addClass('is-open');
+			$('#top_menu .icon_close').show();
+			
+		})
+		$('#top_menu .icon_close').on('click', function(){
+			$('.top-search-form').removeClass('is-open');
+			$('#top_menu .icon_close').hide();
+		})
+
+
+		$('.nav-tabs .nav-link:first').addClass('active');
+		$('.tab-content .tab-pane:first').addClass('show active');
 		
 	
 })(window.jQuery);
