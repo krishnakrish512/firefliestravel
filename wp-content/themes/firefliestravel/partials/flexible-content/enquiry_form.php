@@ -70,7 +70,6 @@ if (($_GET['tour_id'])) {
 <!--/main-->
 <script>
     (function($){
-        "use strict";
         $('[name="tour"]').attr('value','<?= $tour_name ?>');
 
     })(jQuery)
