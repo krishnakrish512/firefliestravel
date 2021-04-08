@@ -69,6 +69,7 @@ if (($_GET['tour_id'])) {
 </main>
 <!--/main-->
 <script>
+
     (function($){
         $('[name="tour"]').attr('value','<?= $tour_name ?>');
 
