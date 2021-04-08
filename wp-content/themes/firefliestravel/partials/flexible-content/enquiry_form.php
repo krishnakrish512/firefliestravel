@@ -69,6 +69,6 @@ if (($_GET['tour_id'])) {
 </main>
 <!--/main-->
 <script>
-    jQuery('[name="tour"]').val('<?= $tour_name ?>');
+    jQuery('[name="tour"]').val('<?= $tour_name ?>')
 
 </script>
