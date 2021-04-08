@@ -45,31 +45,8 @@ $contact = get_field('contact', 'option');
             <h5>Booking Form</h5>
         </div>
         <div class="box_detail-body">
-            <form action="#" class="">
-                <div class="form-group">
-                    <div class="form-group input-dates">
-                        <input class="form-control" type="text" name="dates" placeholder="When..">
-                        <i class="icon_calendar"></i>
-                    </div>
-                    <div class="panel-dropdown">
-                        <a href="#">Guests <span class="qtyTotal">1</span></a>
-                        <div class="panel-dropdown-content right">
-                            <div class="qtyButtons">
-                                <label>Adults</label>
-                                <div class="qtyDec"></div>
-                                <input type="text" name="qtyInput" value="1">
-                                <div class="qtyInc"></div>
-                            </div>
-                            <div class="qtyButtons">
-                                <label>Childrens</label>
-                                <div class="qtyDec"></div>
-                                <input type="text" name="qtyInput" value="0">
-                                <div class="qtyInc"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" class="btn_1 inline-btn w-100" value="Book Now">
-            </form>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Enquiry Form')) . "?tour_id=" . get_the_ID()); ?>"
+               class="btn_1 full-width purchase mb-3">Book Your Tour Now</a>
         </div>
     </div>
     <div class="box_detail booking d-none">

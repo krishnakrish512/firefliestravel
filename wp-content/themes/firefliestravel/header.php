@@ -25,7 +25,7 @@
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
-        <?php wp_head(); ?>
+    <?php wp_head(); ?>
 
 </head>
 
@@ -90,9 +90,12 @@
                     )); ?>
                 </nav>
             </div>
-            <form action="<?php echo esc_url(home_url('/')); ?>" class="top-search-form">
+
+            <form  id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="top-search-form">
                 <div class="container">
-                    <input type="text" class="form-control" placeholder="Type & Hit Enter...">
+                    <input type="text" class="form-control" name="s"  placeholder="Type & Hit Enter...">
+                    <input type="hidden" name="post_type" value="tour">
+                    <button class="search-area__submit" type="submit"></button>
                 </div>
 
             </form>

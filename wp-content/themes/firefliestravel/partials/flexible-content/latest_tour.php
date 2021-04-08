@@ -58,7 +58,7 @@
                                             <img src="<?= $image ?>" class="img-fluid" alt="">
                                             <div class="media-card--info">
                                                 <h5 class="has-line"><?= $country->name ?></h5>
-                                                <span><?= $tour_count ?> Tours</span>
+<!--                                                <span>--><?//= $tour_count ?><!-- Tours</span>-->
                                                 <a href="<?= get_term_link($country_id) ?>" class="btn_2">Explore</a>
                                             </div>
                                         </figure>

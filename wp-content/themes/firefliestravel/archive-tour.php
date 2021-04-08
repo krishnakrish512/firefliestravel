@@ -24,7 +24,7 @@
                     the_post();
                     ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="box_grid">
+                        <div class="box_grid box_grid--2">
                             <?php if (has_post_thumbnail()): ?>
                                 <figure>
                                     <?php $image = get_the_post_thumbnail(get_the_ID(), 'category-thumb');
@@ -38,18 +38,22 @@
                                 </figure>
                             <?php endif; ?>
                             <div class="wrapper">
+
+                            <span class="duration"><i
+                                        class="icon_clock_alt"></i> <?php the_field('trip_days') ?></span>
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <p><?php the_field('intro_text'); ?></p>
+<!--                                <p>--><?php //the_field('intro_text'); ?><!--</p>-->
                                 <div class="box_grid--footer">
-                                <?php if (get_field('price')): ?>
-                                    <span class="price">From <strong>$<?php the_field('price'); ?></strong> /per person</span>
-                                <?php endif; ?>
-                                <?php if (!get_field('price')): ?>
-                                    <a href="<?php the_permalink(); ?>">
-                                    Get A Quote Now</a>
-                                <?php endif; ?>
+
+                                    <?php if (get_field('price')): ?>
+                                        <span class="price">From <strong>$<?= get_field('price'); ?></strong> /per person</span>
+                                    <?php endif; ?>
+                                    <?php if (!get_field('price')): ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            Get A Quote Now</a>
+                                    <?php endif; ?>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

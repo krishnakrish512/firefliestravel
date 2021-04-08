@@ -10,7 +10,7 @@
                         <div class="meta container">
                             <h3><?php the_sub_field('title'); ?></h3>
                             <div class="info">
-                                <p><strong>220</strong> Hotels - <strong>150</strong> Restaurant</p>
+                                <p><?php the_sub_field('sub_title') ?></p>
                             </div>
                             <a href="<?php the_sub_field('link'); ?>" class="btn_1">Read more</a>
                         </div>
