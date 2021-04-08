@@ -720,9 +720,9 @@ ul#top_menu {
 			margin: 0 0 0 10px;
 		}
 		@include mobile {
-			&:first-child {
-				display: none;
-			}
+			// &:first-child {
+			// 	display: none;
+			// }
 		}
 		a {
 			color: #000;

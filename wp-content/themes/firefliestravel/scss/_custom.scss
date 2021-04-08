@@ -4,6 +4,11 @@ p:emty{
         display: none;
     }
 }
+.btn{
+    &_mobile{
+        padding: 0;
+    }
+}
 .header{
     padding: 52px 0 0 ;
     &-top{
@@ -40,7 +45,16 @@ p:emty{
                 }
                 a{
                     color: #fff;
-                    @include fontSize(14px);
+                    font-size: 0;
+                    @media only screen and (min-width:768px){
+                        @include fontSize(14px);
+                    }
+                    i{
+                        @include fontSize(14px);
+                        @media only screen and (min-width:768px){
+                           // @include fontSize(14px);
+                        }
+                    }
                 }
             }
         }
@@ -58,7 +72,17 @@ p:emty{
             ul{
                 li{
                     a  {
-                        @include fontSize(16px);
+                        font-size: 0;
+                        @media only screen and (min-width:768px){
+                            @include fontSize(16px);
+                        }
+
+                        i{
+                            @include fontSize(16px);
+                            @media only screen and (min-width:768px){
+                               // @include fontSize(14px);
+                            }
+                        }
                     }
                 }
             }
@@ -149,6 +173,20 @@ p:emty{
         }
     }
 }
+.hamburger{
+    margin-top: -20px;
+    &-inner{
+        background-color:  $gray_dark ;
+        &::after,
+        &::before{
+            background-color:  $gray_dark ;
+        }
+
+    }
+}
+.hamburger-inner, 
+.hamburger-inner::after, 
+.hamburger-inner::before
 
 .box_grid{
     .wrapper{
