@@ -57,12 +57,18 @@
                             </div>
                         </div>
                     </div>
-                <?php endwhile; ?>
+                <?php endwhile;
+                global $wp_query;
+                $paged       = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                $total_pages = $wp_query->max_num_pages;
+                ?>
             </div>
             <!-- /row -->
         </div>
         <!-- /wrapper-grid -->
 
+        <!-- pagination -->
+        <?php firefiles_pagination( $paged, $total_pages ); ?>
         <p class="text-center d-none"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
 
     </div>

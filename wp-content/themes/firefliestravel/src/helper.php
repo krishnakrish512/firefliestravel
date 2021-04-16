@@ -51,5 +51,33 @@ function tour_share_meta()
 
 add_action('wp_head', 'tour_share_meta');
 
+function firefiles_pagination( $paged, $total ) {
+    $total_pages  = $total;
+    $current_page = $paged;
+    if ( $total_pages > 1 ) {
+        ?>
+        <div class="wander-pagination__pagination">
+            <?php
+            $page_links = paginate_links( [
+                'base'      => get_pagenum_link( 1 ) . '%_%',
+                'format'    => '?paged=%#%',
+                'current'   => $current_page,
+                'total'     => $total_pages,
+                'prev_text' => '<i class="fa fa-angle-left"></i>',
+                'next_text' => '<i class="fa fa-angle-right"></i>',
+                'type'      => 'array'
+            ] );
+            //			var_dump( $page_links );
+
+            foreach ( $page_links as $page_link ) {
+                echo "<div class='wander-pagination__pagination__paging'>";
+                echo $page_link;
+                echo "</div>";
+            }
+            ?>
+        </div><!-- end row -->
+        <?php
+    }
+}
 
 
