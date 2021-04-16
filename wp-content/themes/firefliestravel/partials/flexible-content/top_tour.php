@@ -33,9 +33,9 @@
                         <div class="wrapper">
                             <span class="duration"><i
                                         class="icon_clock_alt"></i> <?php the_field('trip_days', $tour->ID) ?></span>
-                            <h3>
+                            <h5>
                                 <a href="<?= get_the_permalink($tour->ID); ?>"><?= get_the_title($tour->ID); ?></a>
-                            </h3>
+                            </h5>
                             <div class="box_grid--footer">
                                 <?php if (get_field('price', $tour->ID)): ?>
                                     <span class="price">From <strong>$<?= get_field('price', $tour->ID); ?></strong> /per person</span>
