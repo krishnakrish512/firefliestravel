@@ -34,15 +34,19 @@
                                     <a href="<?php the_permalink(); ?>"><?= $image; ?>
                                         <div class="read_more"><span>Read more</span></div>
                                     </a>
-                                    <small><?php the_field('country_name'); ?></small>
+                                    <?php if (get_field('country_name')): ?>
+                                        <small><?php the_field('country_name'); ?></small>
+                                    <?php endif; ?>
                                 </figure>
                             <?php endif; ?>
                             <div class="wrapper">
-
-                            <span class="duration"><i
-                                        class="icon_clock_alt"></i> <?php the_field('trip_days') ?></span>
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-<!--                                <p>--><?php //the_field('intro_text'); ?><!--</p>-->
+                                <?php if (get_field('trip_days')): ?>
+                                    <span class="duration"><i
+                                                class="icon_clock_alt"></i> <?php the_field('trip_days') ?></span>
+                                <?php endif; ?>
+                                <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                <!--                                <p>--><?php //the_field('intro_text');
+                                ?><!--</p>-->
                                 <div class="box_grid--footer">
 
                                     <?php if (get_field('price')): ?>
@@ -58,9 +62,6 @@
                         </div>
                     </div>
                 <?php endwhile;
-                global $wp_query;
-                $paged       = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-                $total_pages = $wp_query->max_num_pages;
                 ?>
             </div>
             <!-- /row -->
@@ -68,7 +69,7 @@
         <!-- /wrapper-grid -->
 
         <!-- pagination -->
-        <?php firefiles_pagination( $paged, $total_pages ); ?>
+
         <p class="text-center d-none"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
 
     </div>

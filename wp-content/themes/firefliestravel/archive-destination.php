@@ -38,7 +38,7 @@
                                 </figure>
                             <?php endif; ?>
                             <div class="wrapper">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                                 <p><?php the_field('intro_text'); ?></p>
                                 <?php if (get_field('price')): ?>
                                     <span class="price"> <strong><?php the_field('price'); ?></strong> </span>

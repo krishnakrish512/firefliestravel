@@ -47,10 +47,19 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <ul class="clearfix">
                             <li><a href="#description" class="active">Description</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#itinerary">Itinerary</a></li>
-                            <li><a href="#include">Include</a></li>
-                            <li><a href="#exclude">Exclude</a></li>
+                            <?php
+                            if (get_field('gallery')):?>
+                                <li><a href="#gallery">Gallery</a></li>
+                            <?php endif; ?>
+                            <?php if (have_rows('itinerary_repeater')): ?>
+                                <li><a href="#itinerary">Itinerary</a></li>
+                            <?php endif; ?>
+                            <?php if (have_rows('cost_included')): ?>
+                                <li><a href="#include">Include</a></li>
+                            <?php endif; ?>
+                            <?php if (have_rows('cost_excluded')): ?>
+                                <li><a href="#exclude">Exclude</a></li>
+                            <?php endif; ?>
                             <?php if (get_field('map_image')): ?>
                                 <li><a href="#location">Location</a></li>
                             <?php endif; ?>
@@ -81,31 +90,35 @@
                             }
                             ?>
                             <hr>
-                            <div class="description-block" id="include">
-                                <h5>Cost Includes</h5>
-                                <ul class="bullets bullets--tick">
-                                    <?php while (have_rows('cost_included')):
-                                        the_row()
-                                        ?>
-                                        <li>
-                                            <?php the_sub_field('list'); ?>
-                                        </li>
-                                    <?php endwhile; ?>
-                                </ul>
-                            </div>
+                            <?php if (have_rows('cost_included')): ?>
+                                <div class="description-block" id="include">
+                                    <h5>Cost Includes</h5>
+                                    <ul class="bullets bullets--tick">
+                                        <?php while (have_rows('cost_included')):
+                                            the_row()
+                                            ?>
+                                            <li>
+                                                <?php the_sub_field('list'); ?>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                             <hr>
-                            <div class="description-block" id="exclude">
-                                <h5>Cost Exclude</h5>
-                                <ul class="bullets bullets--tick">
-                                    <?php while (have_rows('cost_excluded')):
-                                        the_row()
-                                        ?>
-                                        <li>
-                                            <?php the_sub_field('list'); ?>
-                                        </li>
-                                    <?php endwhile; ?>
-                                </ul>
-                            </div>
+                            <?php if (have_rows('cost_excluded')): ?>
+                                <div class="description-block" id="exclude">
+                                    <h5>Cost Exclude</h5>
+                                    <ul class="bullets bullets--tick">
+                                        <?php while (have_rows('cost_excluded')):
+                                            the_row()
+                                            ?>
+                                            <li>
+                                                <?php the_sub_field('list'); ?>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                             <hr>
                             <?php if (get_field('map_image')): ?>
                                 <div class="description-block" id="location">

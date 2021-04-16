@@ -41,9 +41,9 @@ $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
                         <div class="wrapper">
                             <span class="duration"><i
                                         class="icon_clock_alt"></i> <?php the_field('trip_days', $post->ID) ?></span>
-                            <h3>
+                            <h5>
                                 <a href="<?= get_the_permalink($post->ID); ?>"><?= get_the_title($post->ID); ?></a>
-                            </h3>
+                            </h5>
                             <?php if (get_field('price', $post->ID)): ?>
                                 <span class="price">From <strong>$<?= get_field('price', $post->ID); ?></strong> /per person</span>
                             <?php endif; ?>
